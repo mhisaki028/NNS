@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    tools:context=".ChooseLaboratoryActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/app_bar_lab"
+        android:id="@+id/app_bar_lab"/>
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@id/app_bar_lab">
+
+        <ImageView
+            android:id="@+id/lab_image"
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circlebackground"
+            android:padding="10dp" />
+
+
+        <TextView
+            android:id="@+id/lab_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lab_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/monsterratmed"
+            android:text="Laboratory Name"
+            android:textColor="@color/textcolor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/lab_name"
+            android:id="@+id/lab_desc"
+            android:layout_width="wrap_content"
+            android:text="Description"
+            android:textSize="12sp"
+            android:textColor="@color/labdesc_textcolor"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="20dp"/>
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/lab_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/divider"/>
+
+        <RelativeLayout
+            android:id="@+id/btnLabInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/icon_user"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/txtlabinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/img1"
+                android:layout_marginTop="15dp"
+                android:textSize="14sp"
+                android:textColor="@color/subtitle_textcolor"
+                android:text="Laboratory Information"/>
+
+            <ImageView
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_chevron"
+                android:tint="@color/textcolor" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnLabInfo">
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/icon_star"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/txtreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/img2"
+                android:layout_marginTop="17dp"
+                android:textSize="14sp"
+                android:textColor="@color/subtitle_textcolor"
+                android:text="Reviews"/>
+
+            <ImageView
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_chevron"
+                android:tint="@color/textcolor" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_below="@id/rel1"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_opacity">
+
+        <Button
+            android:id="@+id/btnBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/btnsignup_bg"
+            android:text="Book Appointment"
+            android:textAllCaps="false"
+            android:fontFamily="@font/monsterratbold"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

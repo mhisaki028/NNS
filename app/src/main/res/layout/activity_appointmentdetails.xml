@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:background="@color/white">
+
+    <include layout="@layout/app_bar_details"
+        android:id="@+id/app_bar_details"/>
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar_details">
+
+        <ImageView
+            android:id="@+id/lab_image"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:padding="10dp"
+            android:background="@drawable/circlebackground"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="30dp"/>
+
+
+        <TextView
+            android:layout_toRightOf="@id/lab_image"
+            android:id="@+id/lab_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textcolor"
+            android:textSize="18sp"
+            android:text="Laboratory Name"
+            android:fontFamily="@font/monsterratmed"
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_below="@id/lab_name"
+            android:layout_toRightOf="@id/lab_image"
+            android:id="@+id/lab_desc"
+            android:layout_width="wrap_content"
+            android:text="Laboratory"
+            android:textSize="12sp"
+            android:textColor="@color/subtitle_textcolor"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="20dp"/>
+
+        <ImageView
+            android:id="@+id/placeholder"
+            android:layout_width="11dp"
+            android:layout_height="14dp"
+            android:layout_toRightOf="@id/lab_image"
+            android:layout_below="@id/lab_desc"
+            android:src="@drawable/icon_placeholder"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:layout_below="@id/lab_desc"
+            android:layout_toRightOf="@id/placeholder"
+            android:id="@+id/lab_loc"
+            android:layout_width="wrap_content"
+            android:text="Location"
+            android:textSize="11sp"
+            android:textColor="@color/subtitle_textcolor"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="20dp"/>
+
+
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rel2"
+            android:layout_below="@id/rel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/card_bg">
+
+            <ImageView
+                android:id="@+id/imgdate"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:src="@drawable/icon_date"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/mydate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgdate"
+                android:layout_marginTop="20dp"
+                android:text="Appointment Date"
+                android:textColor="@color/darkertext"
+                android:textSize="12sp"
+                android:fontFamily="@font/monsterratbold" />
+
+            <ImageView
+                android:id="@+id/divider"
+                android:layout_below="@id/mydate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp" />
+
+            <ImageView
+                android:id="@+id/imgtime"
+                android:layout_below="@id/imgdate"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:src="@drawable/icon_time"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/mytime"
+                android:layout_below="@id/divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgtime"
+                android:layout_marginTop="10dp"
+                android:text="Appointment Time"
+                android:textColor="@color/darkertext"
+                android:textSize="12sp"
+                android:fontFamily="@font/monsterratbold"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/txtpatient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mytime"
+                android:layout_marginLeft="20dp"
+                android:text="Patient"
+                android:textSize="14sp"
+                android:textColor="@color/textcolor" />
+
+            <ImageView
+                android:id="@+id/divider0"
+                android:layout_below="@id/txtpatient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp" />
+
+            <ImageView
+                android:id="@+id/imgpatient"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/divider0"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/icon_user"/>
+
+            <TextView
+                android:layout_below="@id/divider0"
+                android:layout_toRightOf="@id/imgpatient"
+                android:id="@+id/patient_name"
+                android:layout_width="wrap_content"
+                android:text="Patient Name"
+                android:textSize="12sp"
+                android:textColor="@color/subtitle_textcolor"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_below="@id/divider0"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/icon_phone"
+                android:layout_toLeftOf="@id/patient_phone"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:layout_below="@id/divider0"
+                android:id="@+id/patient_phone"
+                android:layout_width="wrap_content"
+                android:text="Mobile No"
+                android:textSize="12sp"
+                android:textColor="@color/subtitle_textcolor"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+
+
+            <TextView
+                android:layout_below="@id/patient_name"
+                android:id="@+id/patient_address"
+                android:layout_width="wrap_content"
+                android:text="Patient Address"
+                android:textSize="12sp"
+                android:textColor="@color/subtitle_textcolor"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:id="@+id/txtserv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/patient_address"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Services"
+                android:textSize="14sp"
+                android:textColor="@color/textcolor" />
+
+            <ImageView
+                android:id="@+id/divider1"
+                android:layout_below="@id/txtserv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Lab Test"
+                android:textSize="14sp"
+                android:textColor="@color/subtitle_textcolor"/>
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_peso"
+                android:tint="@color/leftarrow_color"
+                android:layout_below="@id/divider1"
+                android:layout_toLeftOf="@id/service_price"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/service_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider1"
+                android:layout_marginTop="10dp"
+                android:text="Price"
+                android:textSize="14sp"
+                android:fontFamily="@font/monsterratbold"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/leftarrow_color"/>
+
+
+            <ImageView
+                android:id="@+id/divider2"
+                android:layout_below="@id/service_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="MedTech Fee"
+                android:textSize="14sp"
+                android:textColor="@color/subtitle_textcolor"/>
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_peso"
+                android:tint="@color/leftarrow_color"
+                android:layout_below="@id/divider2"
+                android:layout_toLeftOf="@id/medtechfee"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/medtechfee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider2"
+                android:layout_marginTop="10dp"
+                android:text="100.00"
+                android:textSize="14sp"
+                android:fontFamily="@font/monsterratbold"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/leftarrow_color"/>
+
+            <ImageView
+                android:id="@+id/divider3"
+                android:layout_below="@id/medtechfee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="myMDLab Fee"
+                android:textSize="14sp"
+                android:textColor="@color/subtitle_textcolor"/>
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_peso"
+                android:tint="@color/leftarrow_color"
+                android:layout_below="@id/divider3"
+                android:layout_toLeftOf="@id/mdlabfee"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/mdlabfee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider3"
+                android:layout_marginTop="10dp"
+                android:text="50.00"
+                android:textSize="14sp"
+                android:fontFamily="@font/monsterratbold"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/leftarrow_color"/>
+
+            <ImageView
+                android:id="@+id/divider4"
+                android:layout_below="@id/mdlabfee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Total Fee"
+                android:textSize="14sp"
+                android:textColor="@color/subtitle_textcolor"/>
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_peso"
+                android:tint="@color/textcolor"
+                android:layout_below="@id/divider4"
+                android:layout_toLeftOf="@id/totalfee"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/totalfee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider4"
+                android:layout_marginTop="10dp"
+                android:text="Total"
+                android:textSize="14sp"
+                android:fontFamily="@font/monsterratbold"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/textcolor"
+                android:layout_marginBottom="25dp"/>
+
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/rel2"
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btnsignup_bg"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/monsterratbold"
+            android:textSize="14sp"/>
+
+
+
+
+
+</RelativeLayout>

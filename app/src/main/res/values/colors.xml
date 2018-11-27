@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#19769F</color>
+    <color name="colorPrimaryDark">#19769F</color>
+    <color name="colorPrimaryLight">#30C6A5</color>
+    <color name="colorAccent">#19769F</color>
+    <color name="facebookBlue">#3F5996</color>
+    <color name="googleRed">#D03E2F</color>
+    <color name="red">#AE1F23</color>
+
+    <color name="btnsignin_textcolor">#19769F</color>
+    <color name="hint_defaultcolor">#9A9A9A</color>
+    <color name="divider_color">#ECECEC</color>
+    <color name="leftarrow_color">#9D9D9D</color>
+    <color name="textcolor">#19769F</color>
+    <color name="subtitle_textcolor">#51565F</color>
+    <color name="labdesc_textcolor">#95989A</color>
+    <color name="layout_divider_color">#D5D5D5</color>
+    <color name="lababout_textcolor">#3D3D3D</color>
+    <color name="dateselected_color">#5FE5BC</color>
+    <color name="dropdown_unselected">#B9B8B8</color>
+    <color name="edttext_bottomborder">#8B8B8B</color>
+    <color name="darkertext">#616161</color>
+    <color name="background_opacity">#99FFFFFF</color>
+    <color name="toolbarprof_color">#1D84A0</color>
+    <color name="circle_outline_color">#EEEEEE</color>
+    <color name="lighttext_color">#C2C2C2</color>
+    <color name="meridian_color">#4A4A4A</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="editTextBG">#e7e7e7</color>
+    <color name="lightgray">#f4f4f4</color>
+
+    <color name="textColor">#000000</color>
+    <color name="gray">#afafaf</color>
+
+    <color name="backgroundColor">#f9f9f9</color>
+    <color name="lightGrayLine">#EDEDED</color>
+    <color name="deepPurple">#7C4DFF</color>
+    <color name="materialYellow">#FFB300</color>
+    <color name="materialGreen">#00BFA5</color>
+    <color name="pinkAccent">#FF4081</color>
+    <color name="materialLightBlue">#86aaff</color>
+
+    <color name="colorNavBG">#FFFFFF</color>
+    <color name="colorNavIcon">#6e6e6e</color>
+    <color name="colorNavText">#01294b</color>
+    
+    
+    
+    <color name="dividerColor">#1f000000</color>
+    <color name="baseReleaseColor">#212121</color>
+    <color name="basePressColor">#FAFAFA</color>
+    <color name="ballReleaseColor">#9E9E9E</color>
+</resources>

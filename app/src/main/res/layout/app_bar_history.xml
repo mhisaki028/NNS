@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".BaseActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ToolbarTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="@drawable/background_toolbar_dashboard"
+            android:id="@+id/toolbar_history"
+            android:layout_height="56dp"
+            android:layout_width="match_parent">
+
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_marginRight="50dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Boking History"
+                android:fontFamily="@font/monsterratmed"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+
+
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

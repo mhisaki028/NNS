@@ -1,0 +1,31 @@
+<resources>
+    <!-- BaseActivity application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/monsterrat</item>
+        <item name="windowNoTitle">true</item>
+
+
+    </style>
+
+    <style name="ToolbarThemeSignup" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/subtitle_textcolor</item>
+    </style>
+
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/spinner_bg</item>
+    </style>
+
+</resources>

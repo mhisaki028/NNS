@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/rootLayout"
+    tools:context=".SignUpActivity">
+
+    <include layout="@layout/app_bar_signup"
+        android:id="@+id/app_bar_signup"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_below="@id/app_bar_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtsignup"
+            android:layout_marginTop="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Sign Up"
+            android:fontFamily="@font/monsterratmed"
+            android:textSize="24sp"
+            android:textColor="@color/btnsignin_textcolor"/>
+
+        <EditText
+            android:id="@+id/edtName"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_below="@id/txtsignup"
+            android:background="@drawable/edt_signup_bg"
+            android:hint="Full Name"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:textColorHint="@color/hint_defaultcolor"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_below="@id/edtName"
+            android:background="@drawable/edt_signup_bg"
+            android:hint="E-mail"
+            android:textSize="14sp"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/hint_defaultcolor"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_below="@id/edtEmail"
+            android:background="@drawable/edt_signup_bg"
+            android:hint="Password"
+            android:textSize="14sp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/hint_defaultcolor"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_below="@id/edtPassword"
+            android:background="@drawable/edt_signup_bg"
+            android:hint="Mobile Number"
+            android:textSize="14sp"
+            android:inputType="phone"
+            android:textColorHint="@color/hint_defaultcolor"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_signup"
+            android:layout_below="@id/edtPhone"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/checkbox_signup"
+            android:layout_below="@id/edtPhone"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:textSize="12sp"
+            android:textColor="@color/subtitle_textcolor"
+            android:text="I agree to myMDLab's Terms of Usage and for my personaldata to be processed according to myMDLAb Privacy Policy"
+            />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_below="@id/checkbox_signup"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="40dp"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/monsterratbold"
+            android:background="@drawable/btnsignup_bg"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btndisabled"
+            android:layout_below="@id/checkbox_signup"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="40dp"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/subtitle_textcolor"
+            android:textSize="14sp"
+            android:fontFamily="@font/monsterratbold"
+            android:background="@drawable/btn_disabled"
+            android:visibility="visible"/>
+
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_progressbar"
+        android:indeterminateTint="@color/btnsignin_textcolor"
+        android:padding="5dp"
+        android:visibility="gone"
+        />
+
+
+
+
+</RelativeLayout>

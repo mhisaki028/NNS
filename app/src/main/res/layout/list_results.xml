@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android_list_view_tutorial_with_example"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:background="@drawable/card_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imgresult"
+            android:layout_alignParentRight="true"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/circlebackground_colored"
+            android:src="@drawable/icon_results"
+            android:tint="@color/white"
+            android:padding="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp" />
+
+
+        <TextView
+            android:id="@+id/result_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textcolor"
+            android:textSize="14sp"
+            android:text="Title"
+            android:fontFamily="@font/monsterratmed"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/txtuploaded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result_name"
+            android:layout_marginLeft="20dp"
+            android:text="Uploaded: "
+            android:textSize="12sp"
+            android:textColor="@color/lighttext_color"/>
+
+        <TextView
+            android:id="@+id/uploaded_at"
+            android:layout_toRightOf="@id/txtuploaded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result_name"
+            android:layout_marginLeft="10dp"
+            android:text="Upload date: "
+            android:textSize="12sp"
+            android:fontFamily="@font/monsterratbold"
+            android:textColor="@color/darkertext"/>
+
+        <TextView
+            android:id="@+id/txtby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtuploaded"
+            android:layout_marginLeft="20dp"
+            android:text="By: "
+            android:textSize="12sp"
+            android:textColor="@color/lighttext_color"/>
+
+        <TextView
+            android:id="@+id/uploaded_by"
+            android:layout_toRightOf="@id/txtby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtuploaded"
+            android:layout_marginLeft="10dp"
+            android:text="Lab name"
+            android:textSize="12sp"
+            android:fontFamily="@font/monsterratbold"
+            android:textColor="@color/darkertext"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

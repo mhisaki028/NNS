@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/app_bar_booking"
+        android:id="@+id/app_bar_booking"/>
+
+
+    <RelativeLayout
+        android:id="@+id/calendar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@id/app_bar_booking">
+
+        <CalendarView
+            android:id="@+id/calendar_view"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusedMonthDateColor="@color/dateselected_color"
+            >
+
+
+        </CalendarView>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/background_opacity"
+        android:layout_below="@id/calendar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date Selected"
+            android:textSize="18sp"
+            android:fontFamily="@font/monsterratbold"
+            android:textColor="@color/white"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_below="@id/date"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/monsterratbold"
+            android:background="@drawable/btnsignup_bg" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

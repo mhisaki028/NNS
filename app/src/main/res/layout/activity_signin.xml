@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_signin"
+    android:id="@+id/rootLayout"
+    tools:context=".SignInActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/logolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/mdlablogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relemail"
+        android:layout_below="@id/logolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="visible">
+
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:paddingLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:background="@drawable/edt_signin_bg"/>
+
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_below="@id/edtEmail"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:background="@drawable/edt_signin_bg"/>
+
+
+        <Button
+            android:id="@+id/btnForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtPassword"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/white"
+            android:text="Forgot Password ?"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:background="@color/transparent" />
+
+        <Button
+            android:id="@+id/btnUsePhone"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/btnSignIn"
+            android:textSize="14sp"
+            android:text="Use Phone Number"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/monsterratbold"
+            android:background="@drawable/edt_signin_bg"/>
+
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/btnForgotPassword"
+            android:textSize="14sp"
+            android:text="Sign In"
+            android:textColor="@color/btnsignin_textcolor"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/monsterratbold"
+            android:background="@drawable/btnsignin_bg"/>
+
+        <TextView
+            android:id="@+id/txtNoAccount"
+            android:layout_below="@id/btnSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't Have An Account ?"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/monsterratmed"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="30dp" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_below="@id/btnSignIn"
+            android:layout_toRightOf="@id/txtNoAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="65dp"
+            android:fontFamily="@font/monsterratmed"
+            android:text="Create An Account"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textColor="@color/btnsignin_textcolor"
+            android:background="@color/transparent"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relphone"
+        android:layout_below="@id/logolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Sign-in"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/monsterratmed"/>
+
+
+        <EditText
+            android:layout_below="@id/txt1"
+            android:id="@+id/edtPhone"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:paddingLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:background="@drawable/edt_signin_bg"/>
+
+        <TextView
+            android:layout_below="@id/edtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Using phone sign-in, you will receive an SMS message for verification"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:id="@+id/txt2"/>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/txt2"
+            android:textSize="14sp"
+            android:text="Send"
+            android:textColor="@color/textcolor"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/monsterratbold"
+            android:background="@drawable/btnsignin_bg"/>
+
+        <EditText
+            android:id="@+id/edtCode"
+            android:hint="Verification Code"
+            android:inputType="phone"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:paddingLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:background="@drawable/edt_signin_bg"
+            android:layout_toRightOf="@id/btnSend"
+            android:layout_below="@id/txt2"/>
+
+
+        <Button
+        android:id="@+id/btnSignInPhone"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/btnSend"
+        android:textSize="14sp"
+        android:text="Sign In"
+        android:textColor="@color/btnsignin_textcolor"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:fontFamily="@font/monsterratbold"
+        android:background="@drawable/btnsignin_bg"/>
+
+        <Button
+            android:id="@+id/btnUseEmail"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/btnSignInPhone"
+            android:textSize="14sp"
+            android:text="Use Email"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/monsterratbold"
+            android:background="@drawable/edt_signin_bg"/>
+
+
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_progressbar"
+        android:indeterminateTint="@color/btnsignin_textcolor"
+        android:padding="5dp"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

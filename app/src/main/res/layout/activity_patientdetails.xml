@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/app_bar_patientdetails"
+        android:id="@+id/app_bar_patientdetails"/>
+
+
+
+        <RelativeLayout
+            android:layout_below="@id/app_bar_patientdetails"
+            android:id="@+id/rel1"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtcomplete"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Complete the following"
+                android:fontFamily="@font/monsterratmed"
+                android:textSize="24sp"
+                android:textColor="@color/btnsignin_textcolor"/>
+            <Button
+                android:id="@+id/btnuser"
+                android:layout_toLeftOf="@id/btnother"
+                android:layout_below="@id/txtcomplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="User"
+                android:textAllCaps="false"
+                android:textColor="@color/dateselected_color"
+                android:fontFamily="@font/monsterratbold"
+                android:textSize="14sp"/>
+            <Button
+                android:id="@+id/btnother"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_below="@id/txtcomplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="Other"
+                android:textAllCaps="false"
+                android:textColor="@color/darkertext"
+                android:fontFamily="@font/monsterratbold"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/edtPatientName"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_below="@id/btnuser"
+                android:background="@drawable/edt_signup_bg"
+                android:hint="Patient Full Name"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:textColorHint="@color/hint_defaultcolor"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_below="@id/edtPatientName"
+                android:background="@drawable/edt_signup_bg"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:textSize="14sp"
+                android:textColorHint="@color/hint_defaultcolor"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel1"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/placeholder"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/icon_placeholder"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/placeholder"
+                android:text="Location"
+                android:textSize="18sp"
+                android:textColor="@color/textcolor"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/monsterratmed"/>
+
+            <EditText
+                android:id="@+id/edtStreet"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_below="@id/placeholder"
+                android:background="@drawable/edt_signup_bg"
+                android:hint="House No., Building and Street Name"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:textColorHint="@color/hint_defaultcolor"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerProvince"
+                android:layout_below="@id/edtStreet"
+                android:layout_width="165dp"
+                android:layout_height="41dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/spinner_bg"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:textColor="@color/hint_defaultcolor" />
+
+            <Spinner
+                android:id="@+id/spinnerCity"
+                android:layout_below="@id/edtStreet"
+                android:layout_marginTop="20dp"
+                android:layout_width="165dp"
+                android:layout_height="41dp"
+                android:background="@drawable/edt_signup_bg"
+                android:textSize="14sp"
+                android:layout_toRightOf="@id/spinnerProvince"
+                android:textColor="@color/hint_defaultcolor"
+                android:layout_marginRight="30dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerBarangay"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_below="@id/spinnerCity"
+                android:background="@drawable/edt_signup_bg"
+                android:textSize="14sp"
+                android:textColor="@color/hint_defaultcolor"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_below="@id/spinnerBarangay"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="40dp"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/monsterratbold"
+                android:background="@drawable/btnsignup_bg"
+                android:layout_marginBottom="30dp"/>
+
+
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

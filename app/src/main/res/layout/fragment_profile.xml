@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar_profile"
+        layout="@layout/app_bar_profile" />
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:padding="25dp"
+            android:src="@drawable/icon_user"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/icon_profilepic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="10dp"/>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel2"
+            android:layout_below="@id/rel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_profile">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/full_name"
+                android:layout_marginTop="10dp"
+                android:text="Full Name"
+                android:textSize="20sp"
+                android:textColor="@color/textcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/divider"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/full_name"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@drawable/divider"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"/>
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/icon_user"
+                android:layout_below="@id/divider"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="7dp"/>
+
+            <TextView
+                android:id="@+id/txtemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:layout_below="@id/divider"
+                android:layout_toRightOf="@id/img1"
+                android:layout_marginLeft="20dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/monsterratmed"
+                android:textColor="@color/lababout_textcolor"/>
+
+            <TextView
+                android:id="@+id/email_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtemail"
+                android:text="not available"
+                android:textSize="12sp"
+                android:textColor="@color/darkertext"
+                android:layout_toRightOf="@id/img1"
+                android:layout_marginLeft="20dp"/>
+
+
+
+            <TextView
+                android:id="@+id/txtsphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Signed-in with Mobile Number"
+                android:layout_below="@id/email_address"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/monsterratmed"
+                android:textColor="@color/dateselected_color"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txtsemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Signed-in with Email"
+                android:layout_below="@id/email_address"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/monsterratmed"
+                android:textColor="@color/dateselected_color"
+                android:visibility="gone"/>
+
+
+            <ImageView
+                android:id="@+id/divider2"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/txtsphone"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@drawable/divider"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"/>
+
+            <RelativeLayout
+                android:id="@+id/btnUserSetting"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_below="@id/divider2">
+
+                <ImageView
+                    android:id="@+id/imgsetting"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/icon_settings"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imgsetting"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Account Setting"
+                    android:textSize="14sp"
+                    android:textColor="@color/subtitle_textcolor" />
+
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_chevron"
+                    android:tint="@color/textcolor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnResult"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_below="@id/btnUserSetting"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imgresult"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/icon_results"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imgresult"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Laboratory Test Results"
+                    android:textSize="14sp"
+                    android:textColor="@color/subtitle_textcolor" />
+
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_chevron"
+                    android:tint="@color/textcolor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnHistory"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/card_bg"
+                android:layout_below="@id/btnResult"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imghistory"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/icon_history"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imghistory"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Booking History"
+                    android:textSize="14sp"
+                    android:textColor="@color/subtitle_textcolor" />
+
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_chevron"
+                    android:tint="@color/textcolor" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/btnLogout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/btnHistory"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circlebackground"
+                android:src="@drawable/icon_logout"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnLogout"
+                android:text="Logout"
+                android:fontFamily="@font/monsterratbold"
+                android:textColor="@color/textcolor"
+                android:textSize="12sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_progressbar"
+        android:indeterminateTint="@color/btnsignin_textcolor"
+        android:padding="5dp"
+        android:visibility="gone"
+        />
+
+
+
+
+
+</RelativeLayout>

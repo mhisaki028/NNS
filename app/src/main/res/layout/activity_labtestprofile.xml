@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    tools:context=".ChooseLaboratoryActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/app_bar_labtesthelp"
+        android:id="@+id/app_bar_labtesthelp"/>
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@id/app_bar_labtesthelp">
+
+        <ImageView
+            android:id="@+id/labtest_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="@drawable/circlebackground"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+
+        <TextView
+            android:layout_toRightOf="@id/labtest_image"
+            android:id="@+id/service_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textcolor"
+            android:textSize="18sp"
+            android:text="LabTest Name"
+            android:fontFamily="@font/monsterratmed"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:id="@+id/pesosign"
+            android:tint="@color/labdesc_textcolor"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_toRightOf="@id/labtest_image"
+            android:layout_below="@id/service_name"
+            android:src="@drawable/icon_peso"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+
+            />
+
+        <TextView
+            android:layout_below="@id/service_name"
+            android:layout_toRightOf="@id/pesosign"
+            android:id="@+id/service_price"
+            android:layout_width="wrap_content"
+            android:text="Price"
+            android:textSize="14sp"
+            android:textColor="@color/labdesc_textcolor"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel2"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/rel1"
+        android:layout_marginTop="3dp">
+
+
+        <TextView
+            android:id="@+id/txttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/monsterratmed"
+            android:text="Laboratory Test Preparation"
+            android:textColor="@color/lababout_textcolor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/service_prep"
+            android:layout_below="@id/txttitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How to Prepare for Laboratory Test"
+            android:textSize="12sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/labdesc_textcolor"
+            android:layout_marginBottom="20dp"
+            />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@id/rel2"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_opacity">
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

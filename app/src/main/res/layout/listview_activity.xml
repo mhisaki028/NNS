@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android_list_view_tutorial_with_example"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/listview_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="@drawable/circlebackground"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+
+        <TextView
+            android:layout_toRightOf="@id/listview_image"
+            android:id="@+id/listview_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textcolor"
+            android:textSize="14sp"
+            android:text="Title"
+            android:fontFamily="@font/monsterratmed"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_below="@id/listview_item_title"
+            android:layout_toRightOf="@id/listview_image"
+            android:id="@+id/listview_item_short_description"
+            android:layout_width="wrap_content"
+            android:text="Subtitle"
+            android:textSize="12sp"
+            android:textColor="@color/subtitle_textcolor"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_chevron"
+            android:tint="@color/leftarrow_color"
+            android:layout_marginTop="35dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

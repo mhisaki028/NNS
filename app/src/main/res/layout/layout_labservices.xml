@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    tools:context=".LabServiceActivity"
+    android:background="@color/white">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel3"
+        android:layout_below="@id/rel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white">
+
+        <ListView
+            android:id="@+id/listview_services"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:divider="@drawable/list_divider_white">
+
+        </ListView>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <include layout="@layout/app_bar_booking"
+        android:id="@+id/app_bar_booking"/>
+
+    <RelativeLayout
+        android:id="@+id/time_layout"
+        android:layout_below="@id/app_bar_booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imgclock"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/icon_clock"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:fontFamily="@font/monsterratbold"
+            android:text="Time"
+            android:textColor="@color/textcolor"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/meridian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time"
+            android:layout_centerHorizontal="true"
+            android:text="AM"
+            android:textSize="17sp"
+            android:textColor="@color/meridian_color"/>
+
+
+        <TextView
+            android:id="@+id/eight"
+            android:layout_below="@id/imgclock"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_signup_bg"
+            android:padding="10dp"
+            android:text="8:00 - 9:00"
+            android:textSize="14sp"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/lababout_textcolor"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/nine"
+            android:layout_below="@id/imgclock"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_signup_bg"
+            android:padding="10dp"
+            android:text="9:00 - 10:00"
+            android:textColor="@color/lababout_textcolor"
+            android:textSize="14sp"
+            android:layout_toRightOf="@id/eight"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/ten"
+            android:layout_below="@id/imgclock"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_signup_bg"
+            android:padding="10dp"
+            android:text="10:00 - 11:00"
+            android:textSize="14sp"
+            android:textColor="@color/lababout_textcolor"
+            android:layout_toRightOf="@id/nine"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"/>
+
+        <TextView
+            android:id="@+id/eleven"
+            android:layout_below="@id/eight"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_signup_bg"
+            android:padding="10dp"
+            android:text="11:00 - 12:00"
+            android:textSize="14sp"
+            android:textColor="@color/lababout_textcolor"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/one"
+            android:layout_below="@id/eight"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_signup_bg"
+            android:padding="10dp"
+            android:text="1:00 - 2:00"
+            android:textSize="14sp"
+            android:textColor="@color/lababout_textcolor"
+            android:layout_toRightOf="@id/eleven"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/two"
+            android:layout_below="@id/eight"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_signup_bg"
+            android:padding="10dp"
+            android:text="2:00 - 3:00"
+            android:textSize="14sp"
+            android:layout_toRightOf="@id/one"
+            android:textColor="@color/lababout_textcolor"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"/>
+
+        <TextView
+            android:id="@+id/three"
+            android:layout_below="@id/eleven"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_signup_bg"
+            android:padding="10dp"
+            android:text="3:00 - 4:00"
+            android:textSize="14sp"
+            android:textColor="@color/lababout_textcolor"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/background_opacity"
+        android:layout_below="@id/time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/monsterratbold"
+            android:background="@drawable/btnsignup_bg" />
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
