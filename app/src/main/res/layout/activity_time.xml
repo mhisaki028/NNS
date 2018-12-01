@@ -12,41 +12,69 @@
         android:layout_height="wrap_content"
         android:background="@color/white">
 
+        <TextView
+            android:id="@+id/txttop"
+            android:text="Choose Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_bar_chooselab"
+            android:fontFamily="@font/monsterratbold"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="27sp"/>
+
         <ImageView
+            android:layout_below="@id/txttop"
             android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
             android:id="@+id/imgclock"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:src="@drawable/icon_clock"/>
 
         <TextView
             android:id="@+id/time"
+            android:layout_toRightOf="@id/imgclock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="30dp"
             android:fontFamily="@font/monsterratbold"
             android:text="Time"
             android:textColor="@color/textcolor"
-            android:textSize="21sp" />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/meridian"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/imgclock"
+            android:layout_below="@id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/time"
-            android:layout_centerHorizontal="true"
             android:text="AM"
             android:textSize="17sp"
             android:textColor="@color/meridian_color"/>
 
+        <TextView
+            android:id="@+id/txtchoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Time"
+            android:layout_below="@id/imgclock"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="17sp"
+            android:textColor="@color/textcolor"
+            android:fontFamily="@font/monsterratbold"/>
+
 
         <TextView
             android:id="@+id/eight"
-            android:layout_below="@id/imgclock"
-            android:layout_width="100dp"
+            android:layout_below="@id/txtchoose"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
@@ -58,8 +86,8 @@
 
         <TextView
             android:id="@+id/nine"
-            android:layout_below="@id/imgclock"
-            android:layout_width="100dp"
+            android:layout_below="@id/txtchoose"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
@@ -72,8 +100,8 @@
 
         <TextView
             android:id="@+id/ten"
-            android:layout_below="@id/imgclock"
-            android:layout_width="100dp"
+            android:layout_below="@id/txtchoose"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
@@ -88,7 +116,7 @@
         <TextView
             android:id="@+id/eleven"
             android:layout_below="@id/eight"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
@@ -101,7 +129,7 @@
         <TextView
             android:id="@+id/one"
             android:layout_below="@id/eight"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
@@ -115,7 +143,7 @@
         <TextView
             android:id="@+id/two"
             android:layout_below="@id/eight"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
@@ -130,7 +158,7 @@
         <TextView
             android:id="@+id/three"
             android:layout_below="@id/eleven"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
@@ -156,8 +184,8 @@
             android:id="@+id/btnNext"
             android:layout_width="match_parent"
             android:layout_height="41dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
             android:layout_marginTop="50dp"
             android:text="Next"
             android:textAllCaps="false"

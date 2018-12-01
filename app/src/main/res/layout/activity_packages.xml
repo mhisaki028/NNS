@@ -7,22 +7,34 @@
     <include layout="@layout/app_bar_packages"
         android:id="@+id/app_bar_packages"/>
 
-    <com.google.android.material.tabs.TabLayout
+    <TextView
+        android:id="@+id/txttop"
+        android:text="Package Deals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/app_bar_packages"
+        android:fontFamily="@font/monsterratbold"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="34sp"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_below="@id/txttop"
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabTextColor="@color/subtitle_textcolor"
-        app:tabSelectedTextColor="@color/colorPrimary"
-        app:tabIndicatorColor="@color/colorPrimary"
-        app:tabTextAppearance="@style/MyCustomTextAppearance"/>
+        android:visibility="invisible"/>
+
+
 
     <androidx.viewpager.widget.ViewPager
         android:layout_below="@id/tabLayout"
         android:id="@+id/viewPager"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"/>
 
 
 

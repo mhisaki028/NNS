@@ -7,9 +7,11 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,8 +46,7 @@ import imn.dev.androidpatientapp.Model.Bookings;
 
 public class PatientDetailsActivity extends AppCompatActivity {
 
-    EditText edtPatientName, edtPhone, edtStreet;
-    Spinner spinnerBarangay, spinnerProvince, spinnerCity;
+    EditText edtPatientName, edtPhone, edtStreet, spinnerBarangay, spinnerProvince, spinnerCity;
     Button btnContinue, btnuser, btnother;
 
 
@@ -53,16 +54,8 @@ public class PatientDetailsActivity extends AppCompatActivity {
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
     RequestQueue requestQueue;
-    String insertUrl = "http://192.168.22.7/androidconn/insertBooking.php";
-    String showUrl = "http://192.168.22.9/androidconn/showBooking.php";
+    String insertUrl = "http://192.168.43.174/androidconn/insertBooking.php";
 
-    String province[] = {"Quezon"};
-    String city[] = {"Lucena"};
-    String barangay[] = {"Barangay 1 (Pob)", "Barangay 2 (Pob)", "Barangay 3 (Pob)", "Barangay 4 (Pob)", "Barangay 5 (Pob)",
-            "Barangay 6 (Pob)", "Barangay 7 (Pob)", "Barangay 8 (Pob)", "Barangay 9 (Pob)", "Barangay 10 (Pob)", "Barra",
-            "Bocohan", "Cotta", "Dalahican", "Domoit", "Gulang-Gulang", "Ibabang Dupay", "Ibabang Iyam", "Ibabang Talim",
-            "Ilayang Dupay", "Ilayang Iyam", "Ilayang Talim", "Isabang", "MarketView", "Mayao Castillo", "Mayao Crossing",
-            "Mayao Kanluran", "Mayao Parada", "Mayao Silangan", "Ransoham", "Talinas", "Talao-talao",};
 
 
     @Override
@@ -90,9 +83,9 @@ public class PatientDetailsActivity extends AppCompatActivity {
         edtPhone = (EditText) findViewById(R.id.edtPhone);
         edtStreet = (EditText) findViewById(R.id.edtStreet);
 
-        spinnerBarangay = (Spinner) findViewById(R.id.spinnerBarangay);
-        spinnerCity = (Spinner) findViewById(R.id.spinnerCity);
-        spinnerProvince = (Spinner) findViewById(R.id.spinnerProvince);
+        spinnerBarangay = (EditText) findViewById(R.id.spinnerBarangay);
+        spinnerCity = (EditText) findViewById(R.id.spinnerCity);
+        spinnerProvince = (EditText) findViewById(R.id.spinnerProvince);
 
 
         btnuser = (Button) findViewById(R.id.btnuser);
@@ -158,6 +151,8 @@ public class PatientDetailsActivity extends AppCompatActivity {
 
                 alertDialogBuilder.setView(popUpView);
 
+
+
                 final String labID = getIntent().getStringExtra("labID");
                 final String labName = getIntent().getStringExtra("labName");
                 final String labDesc = getIntent().getStringExtra("labDesc");
@@ -169,10 +164,41 @@ public class PatientDetailsActivity extends AppCompatActivity {
                 final String patientName = edtPatientName.getText().toString();
                 final String street = edtStreet.getText().toString();
                 final String phone = edtPhone.getText().toString();
-                final String barangay = "Mayao Crossing"; //spinnerBarangay.getSelectedItem().toString();
-                final String city = "Lucena City"; //spinnerCity.getSelectedItem().toString();
-                final String province = "Quezon";//spinnerProvince.getSelectedItem().toString();
+                final String barangay = spinnerBarangay.getText().toString();
+                final String city = spinnerCity.getText().toString();
+                final String province = spinnerProvince.getText().toString();
                 final String address = street + " " + barangay + " " + city + ", " + province;
+
+                if(TextUtils.isEmpty(street)){
+                    edtStreet.setBackgroundResource(R.drawable.edt_signin_error);
+                    edtStreet.setHint("Please fill-out this form");
+                    edtStreet.setHintTextColor(Color.parseColor("#D03E2F"));
+                }
+
+                if(TextUtils.isEmpty(barangay)){
+                    spinnerBarangay.setBackgroundResource(R.drawable.edt_signin_error);
+                    spinnerBarangay.setHint("Please fill-out this form");
+                    spinnerBarangay.setHintTextColor(Color.parseColor("#D03E2F"));
+                }
+
+                if(TextUtils.isEmpty(city)){
+                    spinnerCity.setBackgroundResource(R.drawable.edt_signin_error);
+                    spinnerCity.setHint("Please fill-out this form");
+                    spinnerCity.setHintTextColor(Color.parseColor("#D03E2F"));
+                }
+
+                if(TextUtils.isEmpty(province)){
+                    spinnerProvince.setBackgroundResource(R.drawable.edt_signin_error);
+                    spinnerProvince.setHint("Please fill-out this form");
+                    spinnerProvince.setHintTextColor(Color.parseColor("#D03E2F"));
+                }
+
+                if(TextUtils.isEmpty(phone)){
+                    edtPhone.setBackgroundResource(R.drawable.edt_signin_error);
+                    edtPhone.setHint("Please enter your mobile number");
+                    edtPhone.setHintTextColor(Color.parseColor("#D03E2F"));
+                }
+
                 DecimalFormat decimalFormat = new DecimalFormat("0.00");
                 Double servprice = Double.parseDouble(servicePrice);
 
@@ -251,7 +277,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
                                 intent.putExtra("phone", phone);
                                 intent.putExtra("address", address);
                                 intent.putExtra("totalfee", total);
-
+                                finish();
                                 startActivity(intent);
                                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                             }
@@ -264,6 +290,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
                         });
 
                         AlertDialog alertDialog = alertDialogBuilder.create();
+                        alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                         alertDialog.show();
 
 

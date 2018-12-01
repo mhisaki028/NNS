@@ -14,7 +14,6 @@ import androidx.appcompat.widget.Toolbar;
 
 public class LaboratoryProfileActivity extends AppCompatActivity {
 
-    Button btnBook;
     RelativeLayout btnLabInfo, btnReviews;
     TextView lab_name, lab_desc;
 
@@ -31,7 +30,6 @@ public class LaboratoryProfileActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        btnBook = (Button) findViewById(R.id.btnBook);
         btnLabInfo = (RelativeLayout) findViewById(R.id.btnLabInfo);
         btnReviews = (RelativeLayout) findViewById(R.id.btnReviews);
         lab_name = (TextView) findViewById(R.id.lab_name);
@@ -68,8 +66,7 @@ public class LaboratoryProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LaboratoryProfileActivity.this, ReviewsActivity.class);
-                intent.putExtra("labID", labID);
-                intent.putExtra("labName", labName);
+                intent.putExtra("labID", labID);intent.putExtra("labName", labName);
                 intent.putExtra("labDesc", labDesc);
                 intent.putExtra("labLoc", labLoc);
                 intent.putExtra("labSched", labSched);
@@ -80,24 +77,6 @@ public class LaboratoryProfileActivity extends AppCompatActivity {
             }
         });
 
-        btnBook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String phone = getIntent().getStringExtra("phone");
-                Intent intent = new Intent(LaboratoryProfileActivity.this, ChooseLabTestActivity.class);
-
-                intent.putExtra("labID", labID);
-                intent.putExtra("labName", labName);
-                intent.putExtra("labDesc", labDesc);
-                intent.putExtra("labLoc", labLoc);
-                intent.putExtra("labSched", labSched);
-                intent.putExtra("labAbout", labAbout);
-                intent.putExtra("phone", phone);
-
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-            }
-        });
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item){

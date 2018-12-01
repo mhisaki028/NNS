@@ -21,14 +21,15 @@
 
         <TextView
             android:id="@+id/txtsignup"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="80dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:text="Sign Up"
-            android:fontFamily="@font/monsterratmed"
-            android:textSize="24sp"
-            android:textColor="@color/btnsignin_textcolor"/>
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/monsterratbold"
+            android:textSize="20sp"
+            android:textColor="@color/lababout_textcolor"/>
 
         <EditText
             android:id="@+id/edtName"
@@ -42,8 +43,8 @@
             android:inputType="text"
             android:textSize="14sp"
             android:textColorHint="@color/hint_defaultcolor"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"/>
 
         <EditText
             android:id="@+id/edtEmail"
@@ -57,8 +58,8 @@
             android:textSize="14sp"
             android:inputType="textEmailAddress"
             android:textColorHint="@color/hint_defaultcolor"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"/>
 
         <EditText
             android:id="@+id/edtPassword"
@@ -72,8 +73,8 @@
             android:textSize="14sp"
             android:inputType="textPassword"
             android:textColorHint="@color/hint_defaultcolor"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"/>
 
         <EditText
             android:id="@+id/edtPhone"
@@ -87,14 +88,14 @@
             android:textSize="14sp"
             android:inputType="phone"
             android:textColorHint="@color/hint_defaultcolor"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"/>
 
         <CheckBox
             android:id="@+id/checkbox_signup"
             android:layout_below="@id/edtPhone"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="80dp"
             android:layout_marginRight="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -105,8 +106,8 @@
             android:layout_toRightOf="@id/checkbox_signup"
             android:layout_below="@id/edtPhone"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
-            android:textSize="12sp"
+            android:layout_marginRight="80dp"
+            android:textSize="11sp"
             android:textColor="@color/subtitle_textcolor"
             android:text="I agree to myMDLab's Terms of Usage and for my personaldata to be processed according to myMDLAb Privacy Policy"
             />
@@ -115,9 +116,9 @@
             android:id="@+id/btnRegister"
             android:layout_below="@id/checkbox_signup"
             android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
             android:layout_marginTop="40dp"
             android:text="Sign Up"
             android:textAllCaps="false"
@@ -131,9 +132,9 @@
             android:id="@+id/btndisabled"
             android:layout_below="@id/checkbox_signup"
             android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
             android:layout_marginTop="40dp"
             android:text="Sign Up"
             android:textAllCaps="false"

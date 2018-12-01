@@ -18,7 +18,7 @@
             android:id="@+id/check"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/ic_check"
+            android:src="@drawable/icon_check"
             android:tint="@color/textcolor"
             android:padding="20dp"/>
 

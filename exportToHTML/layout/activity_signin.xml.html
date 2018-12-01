@@ -1,0 +1,289 @@
+<html>
+<head>
+<title>activity_signin.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000; font-style: italic;}
+.s1 { color: #0000ff; font-weight: bold;}
+.s2 { color: #000000;}
+.s3 { color: #008000; font-weight: bold;}
+.s4 { color: #000080; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+activity_signin.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version=</span><span class="s3">&quot;1.0&quot; </span><span class="s1">encoding=</span><span class="s3">&quot;utf-8&quot;</span><span class="s0">?&gt;</span>
+&lt;<span class="s4">RelativeLayout </span><span class="s1">xmlns:android=</span><span class="s3">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="s1">xmlns:app=</span><span class="s3">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="s1">xmlns:tools=</span><span class="s3">&quot;http://schemas.android.com/tools&quot;</span>
+    <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+    <span class="s1">android:layout_height=</span><span class="s3">&quot;match_parent&quot;</span>
+    <span class="s1">android:background=</span><span class="s3">&quot;@drawable/background_signin&quot;</span>
+    <span class="s1">android:id=</span><span class="s3">&quot;@+id/rootLayout&quot;</span>
+    <span class="s1">tools:context=</span><span class="s3">&quot;.SignInActivity&quot;</span>&gt;
+
+
+    &lt;<span class="s4">RelativeLayout</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/logolayout&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;10dp&quot;</span>
+        <span class="s1">android:gravity=</span><span class="s3">&quot;center&quot;</span>&gt;
+
+        &lt;<span class="s4">ImageView</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:src=</span><span class="s3">&quot;@mipmap/mdlablogo&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;100dp&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+            <span class="s1">android:visibility=</span><span class="s3">&quot;invisible&quot;</span>/&gt;
+    &lt;/<span class="s4">RelativeLayout</span>&gt;
+
+    &lt;<span class="s4">RelativeLayout</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/relemail&quot;</span>
+        <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/logolayout&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;30dp&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;visible&quot;</span>&gt;
+
+
+        &lt;<span class="s4">EditText</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/edtEmail&quot;</span>
+            <span class="s1">android:hint=</span><span class="s3">&quot;E-mail&quot;</span>
+            <span class="s1">android:inputType=</span><span class="s3">&quot;textEmailAddress&quot;</span>
+            <span class="s1">android:textColorHint=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:paddingLeft=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;40dp&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/edt_signin_bg&quot;</span>/&gt;
+
+
+        &lt;<span class="s4">EditText</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/edtPassword&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/edtEmail&quot;</span>
+            <span class="s1">android:hint=</span><span class="s3">&quot;Password&quot;</span>
+            <span class="s1">android:inputType=</span><span class="s3">&quot;textPassword&quot;</span>
+            <span class="s1">android:textColorHint=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:paddingLeft=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/edt_signin_bg&quot;</span>/&gt;
+
+
+        &lt;<span class="s4">Button</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/btnForgotPassword&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/edtPassword&quot;</span>
+            <span class="s1">android:layout_alignParentRight=</span><span class="s3">&quot;true&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Forgot Password ?&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;12sp&quot;</span>
+            <span class="s1">android:textAllCaps=</span><span class="s3">&quot;false&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@color/transparent&quot; </span>/&gt;
+
+        &lt;<span class="s4">Button</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/btnUsePhone&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/btnSignIn&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Use Phone Number&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textAllCaps=</span><span class="s3">&quot;false&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:fontFamily=</span><span class="s3">&quot;@font/monsterratbold&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/edt_signin_bg&quot;</span>/&gt;
+
+
+        &lt;<span class="s4">Button</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/btnSignIn&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;40dp&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/btnForgotPassword&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Sign In&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/btnsignin_textcolor&quot;</span>
+            <span class="s1">android:textAllCaps=</span><span class="s3">&quot;false&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:fontFamily=</span><span class="s3">&quot;@font/monsterratbold&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/btnsignin_bg&quot;</span>/&gt;
+
+        &lt;<span class="s4">TextView</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/txtNoAccount&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/btnSignIn&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Don't Have An Account ?&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:fontFamily=</span><span class="s3">&quot;@font/monsterratmed&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;80dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot; </span>/&gt;
+
+        &lt;<span class="s4">Button</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/btnSignUp&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/btnSignIn&quot;</span>
+            <span class="s1">android:layout_toRightOf=</span><span class="s3">&quot;@id/txtNoAccount&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;10dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;65dp&quot;</span>
+            <span class="s1">android:fontFamily=</span><span class="s3">&quot;@font/monsterratmed&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Create An Account&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:textAllCaps=</span><span class="s3">&quot;false&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/btnsignin_textcolor&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@color/transparent&quot;</span>/&gt;
+
+    &lt;/<span class="s4">RelativeLayout</span>&gt;
+
+    &lt;<span class="s4">RelativeLayout</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/relphone&quot;</span>
+        <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/logolayout&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;30dp&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>&gt;
+
+        &lt;<span class="s4">TextView</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/txt1&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Phone Sign-in&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;24sp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:fontFamily=</span><span class="s3">&quot;@font/monsterratmed&quot;</span>/&gt;
+
+
+        &lt;<span class="s4">EditText</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/txt1&quot;</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/edtPhone&quot;</span>
+            <span class="s1">android:hint=</span><span class="s3">&quot;Phone Number&quot;</span>
+            <span class="s1">android:inputType=</span><span class="s3">&quot;phone&quot;</span>
+            <span class="s1">android:textColorHint=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:paddingLeft=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;40dp&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/edt_signin_bg&quot;</span>/&gt;
+
+        &lt;<span class="s4">TextView</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/edtPhone&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Using phone sign-in, you will receive an SMS message for verification&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;5dp&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;12sp&quot;</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/txt2&quot;</span>/&gt;
+
+        &lt;<span class="s4">Button</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/btnSend&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/txt2&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Send&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/textcolor&quot;</span>
+            <span class="s1">android:textAllCaps=</span><span class="s3">&quot;false&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:fontFamily=</span><span class="s3">&quot;@font/monsterratbold&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/btnsignin_bg&quot;</span>/&gt;
+
+        &lt;<span class="s4">EditText</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/edtCode&quot;</span>
+            <span class="s1">android:hint=</span><span class="s3">&quot;Verification Code&quot;</span>
+            <span class="s1">android:inputType=</span><span class="s3">&quot;phone&quot;</span>
+            <span class="s1">android:textColorHint=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:paddingLeft=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;10dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/edt_signin_bg&quot;</span>
+            <span class="s1">android:layout_toRightOf=</span><span class="s3">&quot;@id/btnSend&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/txt2&quot;</span>/&gt;
+
+
+        &lt;<span class="s4">Button</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/btnSignInPhone&quot;</span>
+        <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;40dp&quot;</span>
+        <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/btnSend&quot;</span>
+        <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+        <span class="s1">android:text=</span><span class="s3">&quot;Sign In&quot;</span>
+        <span class="s1">android:textColor=</span><span class="s3">&quot;@color/btnsignin_textcolor&quot;</span>
+        <span class="s1">android:textAllCaps=</span><span class="s3">&quot;false&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+        <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+        <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+        <span class="s1">android:fontFamily=</span><span class="s3">&quot;@font/monsterratbold&quot;</span>
+        <span class="s1">android:background=</span><span class="s3">&quot;@drawable/btnsignin_bg&quot;</span>/&gt;
+
+        &lt;<span class="s4">Button</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/btnUseEmail&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/btnSignInPhone&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Use Email&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textAllCaps=</span><span class="s3">&quot;false&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:fontFamily=</span><span class="s3">&quot;@font/monsterratbold&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/edt_signin_bg&quot;</span>/&gt;
+
+
+
+    &lt;/<span class="s4">RelativeLayout</span>&gt;
+
+
+    &lt;<span class="s4">ProgressBar</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/progressBar&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;45dp&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;45dp&quot;</span>
+        <span class="s1">android:layout_centerHorizontal=</span><span class="s3">&quot;true&quot;</span>
+        <span class="s1">android:layout_centerVertical=</span><span class="s3">&quot;true&quot;</span>
+        <span class="s1">android:background=</span><span class="s3">&quot;@drawable/background_progressbar&quot;</span>
+        <span class="s1">android:indeterminateTint=</span><span class="s3">&quot;@color/btnsignin_textcolor&quot;</span>
+        <span class="s1">android:padding=</span><span class="s3">&quot;5dp&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        /&gt;
+
+&lt;/<span class="s4">RelativeLayout</span>&gt;</pre>
+</body>
+</html>

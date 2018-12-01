@@ -147,28 +147,6 @@
 
 
 
-    <RelativeLayout
-        android:layout_below="@id/rel1"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/background_opacity">
-
-        <Button
-            android:id="@+id/btnBook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/btnsignup_bg"
-            android:text="Book Appointment"
-            android:textAllCaps="false"
-            android:fontFamily="@font/monsterratbold"
-            android:textColor="@color/white"
-            android:textSize="14sp"/>
-
-    </RelativeLayout>
 
 
 </RelativeLayout>

@@ -1,0 +1,185 @@
+<html>
+<head>
+<title>activity_signup.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000; font-style: italic;}
+.s1 { color: #0000ff; font-weight: bold;}
+.s2 { color: #000000;}
+.s3 { color: #008000; font-weight: bold;}
+.s4 { color: #000080; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+activity_signup.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version=</span><span class="s3">&quot;1.0&quot; </span><span class="s1">encoding=</span><span class="s3">&quot;utf-8&quot;</span><span class="s0">?&gt;</span>
+&lt;<span class="s4">RelativeLayout </span><span class="s1">xmlns:android=</span><span class="s3">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="s1">xmlns:app=</span><span class="s3">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="s1">xmlns:card_view=</span><span class="s3">&quot;http://schemas.android.com/tools&quot;</span>
+    <span class="s1">xmlns:tools=</span><span class="s3">&quot;http://schemas.android.com/tools&quot;</span>
+    <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+    <span class="s1">android:layout_height=</span><span class="s3">&quot;match_parent&quot;</span>
+    <span class="s1">android:background=</span><span class="s3">&quot;@color/white&quot;</span>
+    <span class="s1">android:id=</span><span class="s3">&quot;@+id/rootLayout&quot;</span>
+    <span class="s1">tools:context=</span><span class="s3">&quot;.SignUpActivity&quot;</span>&gt;
+
+    &lt;<span class="s4">include </span><span class="s1">layout=</span><span class="s3">&quot;@layout/app_bar_signup&quot;</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/app_bar_signup&quot;</span>/&gt;
+
+
+    &lt;<span class="s4">RelativeLayout</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/rel1&quot;</span>
+        <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/app_bar_signup&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>&gt;
+
+        &lt;<span class="s4">TextView</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/txtsignup&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;110dp&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Sign Up&quot;</span>
+            <span class="s1">android:fontFamily=</span><span class="s3">&quot;@font/monsterratmed&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;24sp&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/btnsignin_textcolor&quot;</span>/&gt;
+
+        &lt;<span class="s4">EditText</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/edtName&quot;</span>
+            <span class="s1">android:paddingLeft=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/txtsignup&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/edt_signup_bg&quot;</span>
+            <span class="s1">android:hint=</span><span class="s3">&quot;Full Name&quot;</span>
+            <span class="s1">android:inputType=</span><span class="s3">&quot;text&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:textColorHint=</span><span class="s3">&quot;@color/hint_defaultcolor&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>/&gt;
+
+        &lt;<span class="s4">EditText</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/edtEmail&quot;</span>
+            <span class="s1">android:paddingLeft=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/edtName&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/edt_signup_bg&quot;</span>
+            <span class="s1">android:hint=</span><span class="s3">&quot;E-mail&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:inputType=</span><span class="s3">&quot;textEmailAddress&quot;</span>
+            <span class="s1">android:textColorHint=</span><span class="s3">&quot;@color/hint_defaultcolor&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>/&gt;
+
+        &lt;<span class="s4">EditText</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/edtPassword&quot;</span>
+            <span class="s1">android:paddingLeft=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/edtEmail&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/edt_signup_bg&quot;</span>
+            <span class="s1">android:hint=</span><span class="s3">&quot;Password&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:inputType=</span><span class="s3">&quot;textPassword&quot;</span>
+            <span class="s1">android:textColorHint=</span><span class="s3">&quot;@color/hint_defaultcolor&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>/&gt;
+
+        &lt;<span class="s4">EditText</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/edtPhone&quot;</span>
+            <span class="s1">android:paddingLeft=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/edtPassword&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/edt_signup_bg&quot;</span>
+            <span class="s1">android:hint=</span><span class="s3">&quot;Mobile Number&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:inputType=</span><span class="s3">&quot;phone&quot;</span>
+            <span class="s1">android:textColorHint=</span><span class="s3">&quot;@color/hint_defaultcolor&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>/&gt;
+
+        &lt;<span class="s4">CheckBox</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/checkbox_signup&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/edtPhone&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;10dp&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot; </span>/&gt;
+
+        &lt;<span class="s4">TextView</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_toRightOf=</span><span class="s3">&quot;@id/checkbox_signup&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/edtPhone&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;12sp&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/subtitle_textcolor&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;I agree to myMDLab's Terms of Usage and for my personaldata to be processed according to myMDLAb Privacy Policy&quot;</span>
+            /&gt;
+
+        &lt;<span class="s4">Button</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/btnRegister&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/checkbox_signup&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;40dp&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Sign Up&quot;</span>
+            <span class="s1">android:textAllCaps=</span><span class="s3">&quot;false&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/white&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:fontFamily=</span><span class="s3">&quot;@font/monsterratbold&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/btnsignup_bg&quot;</span>
+            <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>/&gt;
+
+        &lt;<span class="s4">Button</span>
+            <span class="s1">android:id=</span><span class="s3">&quot;@+id/btndisabled&quot;</span>
+            <span class="s1">android:layout_below=</span><span class="s3">&quot;@id/checkbox_signup&quot;</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;41dp&quot;</span>
+            <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginRight=</span><span class="s3">&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;40dp&quot;</span>
+            <span class="s1">android:text=</span><span class="s3">&quot;Sign Up&quot;</span>
+            <span class="s1">android:textAllCaps=</span><span class="s3">&quot;false&quot;</span>
+            <span class="s1">android:textColor=</span><span class="s3">&quot;@color/subtitle_textcolor&quot;</span>
+            <span class="s1">android:textSize=</span><span class="s3">&quot;14sp&quot;</span>
+            <span class="s1">android:fontFamily=</span><span class="s3">&quot;@font/monsterratbold&quot;</span>
+            <span class="s1">android:background=</span><span class="s3">&quot;@drawable/btn_disabled&quot;</span>
+            <span class="s1">android:visibility=</span><span class="s3">&quot;visible&quot;</span>/&gt;
+
+
+
+    &lt;/<span class="s4">RelativeLayout</span>&gt;
+
+    &lt;<span class="s4">ProgressBar</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/progressBar&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;45dp&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;45dp&quot;</span>
+        <span class="s1">android:layout_centerHorizontal=</span><span class="s3">&quot;true&quot;</span>
+        <span class="s1">android:layout_centerVertical=</span><span class="s3">&quot;true&quot;</span>
+        <span class="s1">android:background=</span><span class="s3">&quot;@drawable/background_progressbar&quot;</span>
+        <span class="s1">android:indeterminateTint=</span><span class="s3">&quot;@color/btnsignin_textcolor&quot;</span>
+        <span class="s1">android:padding=</span><span class="s3">&quot;5dp&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        /&gt;
+
+
+
+
+&lt;/<span class="s4">RelativeLayout</span>&gt;</pre>
+</body>
+</html>

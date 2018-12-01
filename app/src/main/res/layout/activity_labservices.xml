@@ -13,42 +13,55 @@
     <RelativeLayout
         android:id="@+id/rel1"
         android:layout_width="match_parent"
-        android:layout_height="37dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/app_bar_labservices"
-        android:background="@drawable/background_toolbar_dashboard"
-        android:layout_marginTop="0.2dp">
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txttop"
+            android:text="Browse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_bar_chooselab"
+            android:fontFamily="@font/monsterratbold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="34sp"/>
 
         <EditText
             android:id="@+id/search_field"
+            android:layout_below="@id/txttop"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginRight="120dp"
-            android:background="@color/transparent"
+            android:background="@drawable/search_layout"
             android:drawableLeft="@drawable/places_ic_search"
-            android:drawableTint="@color/white"
-            android:hint="Find specific lab test"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            android:textSize="14sp"
+            android:drawableTint="@color/hint_defaultcolor"
+            android:hint="Search"
+            android:textColorHint="@color/hint_defaultcolor"
+            android:textColor="@color/hint_defaultcolor"
+            android:textSize="17sp"
             android:fontFamily="@font/monsterratmed"
-            android:drawablePadding="20dp" />
+            android:drawablePadding="20dp"
+            android:paddingLeft="10dp" />
 
         <Button
             android:id="@+id/btnSearch"
+            android:layout_below="@id/txttop"
+            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/btn_search_bg"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="7dp"
-            android:text="Search"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:text="GO"
             android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:fontFamily="@font/monsterratmed"/>
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:fontFamily="@font/monsterratbold"/>
 
 
     </RelativeLayout>
@@ -58,14 +71,16 @@
         android:layout_below="@id/rel1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
 
         <ListView
             android:id="@+id/listview_services"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:dividerHeight="1dp"
-            android:divider="@drawable/list_divider">
+            android:divider="@drawable/list_divider_2">
 
         </ListView>
 

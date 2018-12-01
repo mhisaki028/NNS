@@ -110,27 +110,37 @@ public class SignUpActivity extends AppCompatActivity {
                 final String phone = edtPhone.getText().toString().trim();
                 if (TextUtils.isEmpty(name)) {
                     edtName.setBackgroundResource(R.drawable.edt_signin_error);
+                    edtName.setHint("Please enter your name");
+                    edtName.setHintTextColor(Color.parseColor("#D03E2F"));
                     return;
                 }
 
                 if (TextUtils.isEmpty(email)) {
                    edtEmail.setBackgroundResource(R.drawable.edt_signin_error);
+                    edtEmail.setHint("Please enter your email address");
+                    edtEmail.setHintTextColor(Color.parseColor("#D03E2F"));
                     return;
                 }
 
                 if (TextUtils.isEmpty(email)) {
                     edtPhone.setBackgroundResource(R.drawable.edt_signin_error);
+                    edtPhone.setHint("Please enter your mobile number");
+                    edtPhone.setHintTextColor(Color.parseColor("#D03E2F"));
                     return;
                 }
 
 
                 if (TextUtils.isEmpty(password)) {
                    edtPassword.setBackgroundResource(R.drawable.edt_signin_error);
+                    edtPassword.setHint("Please enter your password");
+                    edtPassword.setHintTextColor(Color.parseColor("#D03E2F"));
                     return;
                 }
 
                 if (password.length() < 6) {
                     edtPassword.setBackgroundResource(R.drawable.edt_signin_error);
+                    edtPassword.setHint("Password too short");
+                    edtPassword.setHintTextColor(Color.parseColor("#D03E2F"));
                     return;
                 }
 

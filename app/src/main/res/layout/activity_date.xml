@@ -15,13 +15,26 @@
         android:background="@color/white"
         android:layout_below="@id/app_bar_booking">
 
+        <TextView
+            android:id="@+id/txttop"
+            android:text="Choose Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_bar_chooselab"
+            android:fontFamily="@font/monsterratbold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="34sp"/>
+
         <CalendarView
+            android:layout_below="@id/txttop"
             android:id="@+id/calendar_view"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusedMonthDateColor="@color/dateselected_color"
+            android:focusedMonthDateColor="@color/colorPrimaryLight"
             >
 
 
@@ -48,15 +61,15 @@
             android:textSize="18sp"
             android:fontFamily="@font/monsterratbold"
             android:textColor="@color/white"
-            android:visibility="visible"/>
+            android:visibility="gone"/>
 
         <Button
             android:id="@+id/btnNext"
             android:layout_below="@id/date"
             android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
             android:layout_marginTop="50dp"
             android:text="Next"
             android:textAllCaps="false"

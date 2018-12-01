@@ -14,7 +14,6 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class AppInfoFragment extends Fragment {
 
-//////HELLO
 
     String[] listviewTitle = new String[]{
             "Appointments", "Reminders", "Lab Test Results",

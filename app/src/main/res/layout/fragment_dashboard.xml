@@ -7,29 +7,59 @@
     android:orientation="vertical"
     tools:context=".DashboardFragment"
     android:focusableInTouchMode="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:background="@color/white">
 
     <include
         android:id="@+id/app_bar_dashboard"
         layout="@layout/app_bar_dashboard" />
 
+    <TextView
+        android:id="@+id/txthome"
+        android:text="Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar_dashboard"
+        android:fontFamily="@font/monsterratbold"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="34sp"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/app_bar_dashboard"
-        android:background="@color/white">
+        android:layout_below="@id/txthome"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp">
 
 
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:dividerHeight="1dp"
         android:divider="@drawable/list_divider" />
 
 
+
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btnsignup_bg"
+        android:text="Book Home Service"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/monsterratbold"
+        android:textColor="@color/white"/>
 
 
 </RelativeLayout>

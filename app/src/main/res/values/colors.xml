@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#19769F</color>
-    <color name="colorPrimaryDark">#19769F</color>
-    <color name="colorPrimaryLight">#30C6A5</color>
+    <color name="colorPrimary">#27A9A2</color>
+    <color name="colorPrimaryDark">#2091A0</color>
+    <color name="colorPrimaryLight">#31CBA5</color>
     <color name="colorAccent">#19769F</color>
     <color name="facebookBlue">#3F5996</color>
     <color name="googleRed">#D03E2F</color>
     <color name="red">#AE1F23</color>
+    <color name="black">#000000</color>
+    <color name="search_color">#EAEBED</color>
 
     <color name="btnsignin_textcolor">#19769F</color>
     <color name="hint_defaultcolor">#9A9A9A</color>
     <color name="divider_color">#ECECEC</color>
     <color name="leftarrow_color">#9D9D9D</color>
-    <color name="textcolor">#19769F</color>
+    <color name="textcolor">#27A9A2</color>
     <color name="subtitle_textcolor">#51565F</color>
     <color name="labdesc_textcolor">#95989A</color>
     <color name="layout_divider_color">#D5D5D5</color>

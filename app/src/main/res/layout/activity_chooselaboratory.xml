@@ -7,26 +7,39 @@
     android:id="@+id/rootLayout"
     tools:context=".ChooseLaboratoryActivity"
     android:focusable="true"
-    android:focusableInTouchMode="true">
+    android:focusableInTouchMode="true"
+    android:background="@color/white">
 
     <include layout="@layout/app_bar_chooselab"
         android:id="@+id/app_bar_chooselab"/>
 
-
+    <TextView
+        android:id="@+id/txttop"
+        android:text="Browse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar_chooselab"
+        android:fontFamily="@font/monsterratbold"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="27sp"/>
 
     <RelativeLayout
         android:id="@+id/rel1"
-        android:layout_below="@id/app_bar_chooselab"
+        android:layout_below="@id/txttop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        >
 
        <ListView
            android:id="@+id/listview_labs"
            android:layout_width="match_parent"
            android:layout_height="match_parent"
-           android:dividerHeight="1dp"
-           android:divider="@drawable/list_divider"
+           android:divider="@drawable/list_divider_white"
            android:layout_marginTop="10dp">
 
        </ListView>

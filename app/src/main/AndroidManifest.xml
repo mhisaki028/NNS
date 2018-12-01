@@ -26,6 +26,12 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -36,6 +42,7 @@
         <activity android:name=".LabTestHelpActivity"/>
         <activity android:name=".LabTestProfileActivity"/>
         <activity android:name=".ChooseLaboratoryActivity" />
+        <activity android:name=".ChooseLaboratory2Activity"/>
         <activity android:name=".LaboratoryProfileActivity"/>
         <activity android:name=".LaboratoryInfoActivity"/>
         <activity android:name=".ReviewsActivity"/>
@@ -45,12 +52,20 @@
         <activity android:name=".PatientDetailsActivity"/>
         <activity android:name=".AppointmentDetailsActivity"/>
         <activity android:name=".BookingFinishActivity"/>
-        <activity android:name=".LabResultActivity"/>
+
+        <activity android:name=".LabResultActivity">
+            <intent-filter>
+                <action android:name="imn.dev.androidpatientapp_TARGET_NOTIFICATION"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
         <activity android:name=".LoadingScreenActivity"/>
         <activity android:name=".SignUpActivity"/>
         <activity android:name=".UserSettingActivity"/>
         <activity android:name=".BookingHistoryActivity"/>
         <activity android:name=".PackagesActivity"/>
+
 
     </application>
 

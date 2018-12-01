@@ -62,7 +62,12 @@ public class AppointmentDetailsActivity extends AppCompatActivity {
         String bookTime = getIntent().getStringExtra("bookTime");
         String patientName = getIntent().getStringExtra("patientName");
         String phone = getIntent().getStringExtra("phone");
-        String address = getIntent().getStringExtra("address");
+        String street = getIntent().getStringExtra("street");
+        String province = getIntent().getStringExtra("province");
+        String city = getIntent().getStringExtra("city");
+        String barangay = getIntent().getStringExtra("barangay");
+
+        String address = street + " " + barangay + " " + city + " " + province;
 
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
         Double servprice = Double.parseDouble(servicePrice);

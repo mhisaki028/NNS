@@ -8,9 +8,6 @@
     tools:context=".LabServiceActivity"
     android:background="@color/white">
 
-
-
-
     <RelativeLayout
         android:id="@+id/rel3"
         android:layout_below="@id/rel2"

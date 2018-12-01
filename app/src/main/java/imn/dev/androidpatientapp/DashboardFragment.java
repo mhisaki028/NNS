@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -22,8 +23,8 @@ public class DashboardFragment extends Fragment {
 
     // Array of strings for ListView Title
     String[] listviewTitle = new String[]{
-            "Medical Laboratories", "Find Medical Laboratory Tests", "Packages",
-            "Lab Test Preparations"
+            "Clinical and Diagnostic Laboratories", "Medical Laboratory Tests", "Laboratory Test Packages",
+            "Laboratory Test Preparations"
     };
 
 
@@ -33,7 +34,7 @@ public class DashboardFragment extends Fragment {
     };
 
     String[] listviewShortDescription = new String[]{
-            "Book for a Medical Lab Test", "Lab Tests and their Prices", "All in One Service Packages",
+            "Know Your Laboratory", "List of Available Laboratory Tests", "Package Deals",
             "Know How to Prepare for Lab Tests"
     };
 
@@ -101,6 +102,18 @@ public class DashboardFragment extends Fragment {
 
             }
         });
+
+        Button btnBook = view.findViewById(R.id.btnBook);
+        btnBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(view.getContext(), ChooseLaboratory2Activity.class);
+                startActivity(intent);
+
+
+            }
+        });
+
 
 
         return view;
