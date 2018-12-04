@@ -29,8 +29,7 @@ import androidx.appcompat.widget.Toolbar;
 import imn.dev.androidpatientapp.Model.LabService;
 
 public class LabTestHelpActivity extends AppCompatActivity {
-    EditText search_field;
-    Button btnSearch;
+    EditText search_field, btnSearch;
     DatabaseReference databaseLabServices;
 
     ListView listViewServices;
@@ -52,7 +51,7 @@ public class LabTestHelpActivity extends AppCompatActivity {
         }
 
         search_field = (EditText) findViewById(R.id.search_field);
-        btnSearch = (Button) findViewById(R.id.btnSearch);
+        btnSearch = (EditText) findViewById(R.id.btnSearch);
         databaseLabServices = FirebaseDatabase.getInstance().getReference("Labservices");
         listViewServices = (ListView)findViewById(R.id.listview_labtesthelp);
         labServiceList = new ArrayList<>();

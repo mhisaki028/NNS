@@ -21,8 +21,8 @@
         android:layout_below="@id/app_bar_chooselab"
         android:fontFamily="@font/monsterratbold"
         android:textColor="@color/black"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
         android:textSize="27sp"/>
 
     <RelativeLayout
@@ -31,16 +31,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+
         >
 
         <ListView
             android:id="@+id/listview_labs"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:divider="@drawable/list_divider_white"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="20dp">
 
         </ListView>
 

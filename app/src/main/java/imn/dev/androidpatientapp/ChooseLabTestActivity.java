@@ -31,7 +31,7 @@ import imn.dev.androidpatientapp.Model.LabService;
 public class ChooseLabTestActivity extends AppCompatActivity {
     EditText search_field;
     RelativeLayout rootLayout;
-    Button btnSearch;
+    EditText btnSearch;
     DatabaseReference databaseServices;
 
     ListView listViewServices;
@@ -60,7 +60,7 @@ public class ChooseLabTestActivity extends AppCompatActivity {
         listViewServices = (ListView) findViewById(R.id.listview_services);
         servicesList = new ArrayList<>();
 
-        btnSearch = (Button) findViewById(R.id.btnSearch);
+        btnSearch = (EditText) findViewById(R.id.btnSearch);
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

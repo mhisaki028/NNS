@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/background_popup">
+
+
+    <TextView
+        android:id="@+id/txt1"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/subtitle_textcolor"
+        android:text="Services "/>
+
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/divider"
+        android:layout_below="@id/txt1"/>
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/imgtest"
+        android:layout_marginLeft="30dp"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_labservices"
+        android:layout_below="@id/txt1"/>
+
+    <TextView
+        android:id="@+id/service_name"
+        android:layout_toRightOf="@id/imgtest"
+        android:layout_below="@id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Service Name" />
+
+    <TextView
+        android:id="@+id/service_price"
+        android:layout_below="@id/service_name"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/imgtest"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Price" />
+
+    <ImageView
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/divider"
+        android:layout_below="@id/service_price"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_below="@id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/subtitle_textcolor"
+        android:text="Delivery Information"/>
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_below="@id/txt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/subtitle_textcolor"
+        android:text="Patient Address"/>
+
+    <TextView
+        android:id="@+id/patient_address"
+        android:layout_below="@id/txt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Patient Address"/>
+
+
+    <TextView
+        android:id="@+id/txt4"
+        android:layout_below="@id/patient_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/subtitle_textcolor"
+        android:text="Medical Lab to deliver Service"/>
+
+    <TextView
+        android:id="@+id/lab_name"
+        android:layout_below="@id/txt4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Lab Name"/>
+
+    <TextView
+        android:id="@+id/bookDate"
+        android:layout_below="@id/lab_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Date"/>
+
+    <TextView
+        android:id="@+id/bookTime"
+        android:layout_below="@id/bookDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Time"/>
+
+    <TextView
+        android:id="@+id/txt5"
+        android:layout_below="@id/bookTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/subtitle_textcolor"
+        android:text="Payment"/>
+
+    <TextView
+        android:id="@+id/txt6"
+        android:layout_below="@id/txt5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Service Price"/>
+
+    <TextView
+        android:id="@+id/service_price2"
+        android:layout_below="@id/txt5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="200dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Service Price"/>
+
+    <TextView
+        android:id="@+id/txt7"
+        android:layout_below="@id/txt6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Medtech Fee"/>
+
+    <TextView
+        android:id="@+id/mtfee"
+        android:layout_below="@id/txt6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="200dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="P 100.00"/>
+
+    <TextView
+        android:id="@+id/txt8"
+        android:layout_below="@id/txt7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="myMDLab Fee"/>
+
+    <TextView
+        android:id="@+id/mdfee"
+        android:layout_below="@id/txt7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="200dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="P 50.00"/>
+
+    <ImageView
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/divider"
+        android:layout_below="@id/mdfee"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/txt9"
+        android:layout_below="@id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Total"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/totalfee"
+        android:layout_below="@id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="200dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Total Fee"/>
+
+
+
+
+
+</RelativeLayout>

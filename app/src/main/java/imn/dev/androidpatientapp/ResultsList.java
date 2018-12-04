@@ -26,7 +26,7 @@ public class ResultsList extends ArrayAdapter<Results> {
 
 
     public ResultsList(@NonNull Activity context, List<Results> resultsList) {
-        super(context, R.layout.list_labservices, resultsList);
+        super(context, R.layout.list_results, resultsList);
         this.context = context;
         this.resultsList = resultsList;
     }

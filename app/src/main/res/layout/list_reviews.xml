@@ -6,55 +6,57 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/review_image"
-            android:layout_width="31dp"
-            android:layout_height="31dp"
-            android:padding="10dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/circlebackground"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/review_background"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp">
 
 
         <TextView
-            android:id="@+id/review_name"
-            android:layout_toRightOf="@id/review_image"
+            android:id="@+id/patient_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/lababout_textcolor"
-            android:textSize="14sp"
-            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:text="Name"
             android:fontFamily="@font/monsterratmed"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"/>
 
         <TextView
-            android:layout_below="@id/review_name"
-            android:id="@+id/review_date"
-            android:layout_toRightOf="@id/review_image"
+            android:id="@+id/txtDay"
             android:layout_width="wrap_content"
-            android:text="Date"
-            android:textSize="10sp"
-            android:fontFamily="@font/monsterratbold"
-            android:textColor="@color/labdesc_textcolor"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            />
+           android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:textSize="17sp"
+            android:layout_alignParentRight="true"
+            android:text="Day"/>
 
         <TextView
-            android:layout_below="@id/review_date"
-            android:id="@+id/review_body"
+            android:id="@+id/txtTime"
+            android:layout_below="@id/txtDay"
             android:layout_width="wrap_content"
-            android:text="Body"
-            android:textSize="12sp"
-            android:textColor="@color/labdesc_textcolor"
             android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:textSize="17sp"
+            android:layout_alignParentRight="true"
+            android:text="Time"/>
+
+        <TextView
+            android:layout_below="@id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="15dp"/>
+            android:text="Review Body"
+            android:textColor="@color/black"
+            android:id="@+id/txtBody"
+            android:layout_marginBottom="20dp"/>
+
 
 
     </RelativeLayout>

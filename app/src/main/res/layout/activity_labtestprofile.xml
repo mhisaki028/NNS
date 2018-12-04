@@ -22,10 +22,10 @@
 
         <ImageView
             android:id="@+id/labtest_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:padding="10dp"
-            android:background="@drawable/recbackground_colored"
+            android:background="@drawable/circlebackground"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"/>
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/textcolor"
-            android:textSize="17sp"
+            android:textSize="20sp"
             android:text="LabTest Name"
             android:fontFamily="@font/monsterratbold"
             android:layout_marginTop="15dp"
@@ -45,14 +45,14 @@
 
         <ImageView
             android:id="@+id/pesosign"
-            android:tint="@color/labdesc_textcolor"
+            android:tint="@color/subtitle_textcolor"
             android:layout_width="19dp"
-            android:layout_height="20dp"
+            android:layout_height="24dp"
             android:layout_toRightOf="@id/labtest_image"
             android:layout_below="@id/service_name"
             android:src="@drawable/icon_peso"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="7dp"
 
             />
 
@@ -62,7 +62,7 @@
             android:id="@+id/service_price"
             android:layout_width="wrap_content"
             android:text="Price"
-            android:textSize="15sp"
+            android:textSize="17sp"
             android:textColor="@color/subtitle_textcolor"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -106,17 +106,6 @@
             android:textColor="@color/subtitle_textcolor"
             android:layout_marginBottom="20dp"
             />
-
-
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:layout_below="@id/rel2"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/background_opacity">
 
 
     </RelativeLayout>

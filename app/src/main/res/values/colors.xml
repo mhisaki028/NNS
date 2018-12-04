@@ -28,6 +28,8 @@
     <color name="circle_outline_color">#EEEEEE</color>
     <color name="lighttext_color">#C2C2C2</color>
     <color name="meridian_color">#4A4A4A</color>
+    <color name="icon_tint">#E6E6E6</color>
+    <color name="review_bg">#e6E5EB</color>
 
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00000000</color>

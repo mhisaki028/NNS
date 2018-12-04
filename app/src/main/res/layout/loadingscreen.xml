@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_signin"
+    android:background="@color/white"
     android:id="@+id/rootLayout">
 
     <TextView
@@ -13,10 +13,9 @@
         android:layout_above="@id/progressBar"
         android:layout_centerHorizontal="true"
         android:text="0 %"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:id="@+id/text_view"
-        android:visibility="gone"/>
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:id="@+id/text_view" />
 
     <ProgressBar
         android:progressTint="@color/white"
@@ -26,6 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerVertical="true"
+        android:backgroundTint="@color/colorPrimary"
+        android:progressBackgroundTint="@color/colorPrimary"
         style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
         />
 

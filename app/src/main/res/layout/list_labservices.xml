@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/android_list_view_tutorial_with_example"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/list_bg"
+        android:elevation="5dp">
 
 
 
@@ -15,11 +23,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/textcolor"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:text="Title"
-            android:fontFamily="@font/monsterratbold"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="40dp"/>
 
 
 
@@ -27,11 +34,11 @@
         <ImageView
             android:id="@+id/pesosign"
             android:layout_width="20dp"
-            android:layout_height="24dp"
+            android:layout_height="25dp"
             android:layout_toLeftOf="@id/service_price"
             android:src="@drawable/icon_peso"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:tint="@color/colorPrimary"/>
 
         <TextView
@@ -39,11 +46,10 @@
             android:id="@+id/service_price"
             android:layout_width="wrap_content"
             android:text="Price"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:textColor="@color/subtitle_textcolor"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
             android:layout_marginRight="20dp"
             android:layout_alignParentRight="true"
             />
@@ -52,6 +58,5 @@
 
 
     </RelativeLayout>
-
 
 </RelativeLayout>

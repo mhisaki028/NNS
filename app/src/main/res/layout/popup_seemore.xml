@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/background_popup">
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/icon_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_below="@id/img"
+        android:id="@+id/txt1"
+        android:drawableLeft="@drawable/ic_check"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="17sp"
+        android:textColor="@color/subtitle_textcolor"
+        android:text="LAB TEST at the comfort of your HOME. Just BOOK and the medtech will go to you! "/>
+
+    <TextView
+        android:id="@+id/txt2"
+        android:drawableLeft="@drawable/ic_check"
+        android:layout_below="@id/txt1"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="17sp"
+        android:textColor="@color/subtitle_textcolor"
+        android:text="Set your own date and time" />
+
+    <TextView
+        android:id="@+id/txt3"
+        android:drawableLeft="@drawable/ic_check"
+        android:layout_below="@id/txt2"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="17sp"
+        android:textColor="@color/subtitle_textcolor"
+        android:text="No need to wait in line" />
+
+    <TextView
+        android:id="@+id/txt4"
+        android:drawableLeft="@drawable/ic_check"
+        android:layout_below="@id/txt3"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="17sp"
+        android:textColor="@color/subtitle_textcolor"
+        android:text="Get the lab results online through the app" />
+
+    <TextView
+        android:id="@+id/txt5"
+        android:layout_below="@id/txt4"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="40dp"
+        android:textSize="17sp"
+        android:fontFamily="@font/monsterratbold"
+        android:textColor="@color/subtitle_textcolor"
+        android:text="BOOK NOW!!"
+        android:layout_marginBottom="10dp"/>
+
+
+
+</RelativeLayout>

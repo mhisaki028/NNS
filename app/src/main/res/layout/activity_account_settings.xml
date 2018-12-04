@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar_profile"
+        layout="@layout/app_bar_profile" />
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:padding="25dp"
+            android:src="@drawable/icon_user"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/icon_profilepic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="10dp"/>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel2"
+            android:layout_below="@id/rel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_profile">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/txttop"
+                android:layout_marginTop="10dp"
+                android:text="Edit Profile Information"
+                android:textSize="20sp"
+                android:textColor="@color/textcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:id="@+id/divider2"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/txttop"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@drawable/divider"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"/>
+
+            <EditText
+                android:id="@+id/edtNewName"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@drawable/edt_signup_bg"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_below="@id/divider2"
+                android:paddingLeft="20dp"
+                android:hint="New Name"
+                android:textColorHint="@color/hint_defaultcolor"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/edtNewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@drawable/edt_signup_bg"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_below="@id/edtNewName"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:hint="New Email"
+                android:textColorHint="@color/hint_defaultcolor"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/edtNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@drawable/edt_signup_bg"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_below="@id/edtNewEmail"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:hint="New Password"
+                android:textColorHint="@color/hint_defaultcolor"
+                android:textColor="@color/black"/>
+
+
+            <ImageView
+                android:id="@+id/btnSave"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/edtNewPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/circlebackground"
+                android:src="@drawable/ic_check"
+                android:tint="@color/colorPrimary"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnSave"
+                android:text="Save"
+                android:fontFamily="@font/monsterratbold"
+                android:textColor="@color/textcolor"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_progressbar"
+        android:indeterminateTint="@color/btnsignin_textcolor"
+        android:padding="5dp"
+        android:visibility="gone"
+        />
+
+
+
+
+
+</RelativeLayout>

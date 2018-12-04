@@ -23,7 +23,7 @@ public class DashboardFragment extends Fragment {
 
     // Array of strings for ListView Title
     String[] listviewTitle = new String[]{
-            "Clinical and Diagnostic Laboratories", "Medical Laboratory Tests", "Laboratory Test Packages",
+            "Medical Laboratories", "Medical Laboratory Tests", "Laboratory Test Packages",
             "Laboratory Test Preparations"
     };
 

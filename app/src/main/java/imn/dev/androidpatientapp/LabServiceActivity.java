@@ -33,7 +33,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 public class LabServiceActivity extends AppCompatActivity {
 
     EditText search_field;
-    Button btnSearch;
+    EditText btnSearch;
     DatabaseReference databaseLabServices;
 
     ListView listViewServices;
@@ -57,7 +57,7 @@ public class LabServiceActivity extends AppCompatActivity {
         }
 
         search_field = (EditText) findViewById(R.id.search_field);
-        btnSearch = (Button) findViewById(R.id.btnSearch);
+        btnSearch = (EditText) findViewById(R.id.btnSearch);
         databaseLabServices = FirebaseDatabase.getInstance().getReference("Labservices");
         listViewServices = (ListView)findViewById(R.id.listview_services);
         labServiceList = new ArrayList<>();

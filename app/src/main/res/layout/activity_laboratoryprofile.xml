@@ -21,8 +21,8 @@
 
         <ImageView
             android:id="@+id/lab_image"
-            android:layout_width="98dp"
-            android:layout_height="98dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:background="@drawable/circlebackground"
@@ -35,11 +35,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/lab_image"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/monsterratmed"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/monsterratbold"
             android:text="Laboratory Name"
             android:textColor="@color/textcolor"
-            android:textSize="14sp" />
+            android:textSize="24sp" />
 
         <TextView
             android:layout_centerHorizontal="true"
@@ -47,26 +47,23 @@
             android:id="@+id/lab_desc"
             android:layout_width="wrap_content"
             android:text="Description"
-            android:textSize="12sp"
+            android:textSize="15sp"
             android:textColor="@color/labdesc_textcolor"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="3dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"/>
 
-        <ImageView
-            android:id="@+id/divider"
-            android:layout_marginTop="15dp"
-            android:layout_below="@id/lab_desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/divider"/>
+    </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/btnLabInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/divider">
+            android:layout_below="@id/rel1"
+            android:background="@color/white"
+            android:layout_marginTop="3dp">
 
             <ImageView
                 android:id="@+id/img1"
@@ -84,15 +81,15 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/img1"
                 android:layout_marginTop="15dp"
-                android:textSize="14sp"
+                android:textSize="17sp"
                 android:textColor="@color/subtitle_textcolor"
                 android:text="Laboratory Information"/>
 
             <ImageView
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_width="14dp"
-                android:layout_height="14dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/ic_chevron"
                 android:tint="@color/textcolor" />
@@ -104,7 +101,9 @@
             android:id="@+id/btnReviews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btnLabInfo">
+            android:layout_below="@id/btnLabInfo"
+            android:layout_marginTop="3dp"
+            android:background="@color/white">
 
             <ImageView
                 android:id="@+id/img2"
@@ -122,30 +121,21 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/img2"
                 android:layout_marginTop="17dp"
-                android:textSize="14sp"
+                android:textSize="17sp"
                 android:textColor="@color/subtitle_textcolor"
                 android:text="Reviews"/>
 
             <ImageView
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_width="14dp"
-                android:layout_height="14dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/ic_chevron"
                 android:tint="@color/textcolor" />
 
 
         </RelativeLayout>
-
-
-
-
-
-    </RelativeLayout>
-
-
-
 
 
 

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android_list_view_tutorial_with_example"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:background="@drawable/card_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textcolor"
+            android:textSize="17sp"
+            android:text="Date"
+            android:fontFamily="@font/monsterratmed"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"/>
+
+        <TextView
+            android:id="@+id/lab_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDate"
+            android:layout_marginLeft="30dp"
+            android:text="Lab name"
+            android:textSize="15sp"
+            android:textColor="@color/lababout_textcolor"/>
+
+
+        <TextView
+            android:id="@+id/service_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lab_name"
+            android:layout_marginLeft="30dp"
+            android:text="Service"
+            android:textSize="15sp"
+            android:textColor="@color/lababout_textcolor"
+            android:layout_marginBottom="15dp"/>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

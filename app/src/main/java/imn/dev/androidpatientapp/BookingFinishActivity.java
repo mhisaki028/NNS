@@ -1,9 +1,16 @@
 package imn.dev.androidpatientapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.text.DecimalFormat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,31 +38,61 @@ public class BookingFinishActivity extends AppCompatActivity {
                 String bookDate = getIntent().getStringExtra("bookDate");
                 String bookTime = getIntent().getStringExtra("bookTime");
                 String patientName = getIntent().getStringExtra("patientName");
-                String phone = getIntent().getStringExtra("phone");
-                String street = getIntent().getStringExtra("street");
-                String province = getIntent().getStringExtra("province");
-                String city = getIntent().getStringExtra("city");
-                String barangay = getIntent().getStringExtra("barangay");
+                String address = getIntent().getStringExtra("address");
 
-                Intent intent = new Intent(BookingFinishActivity.this, AppointmentDetailsActivity.class);
-                intent.putExtra("labID", labID);
-                intent.putExtra("labName", labName);
-                intent.putExtra("labDesc", labDesc);
-                intent.putExtra("labLoc", labLoc);
-                intent.putExtra("serviceName", serviceName);
-                intent.putExtra("servicePrice", servicePrice);
-                intent.putExtra("bookDate", bookDate);
-                intent.putExtra("bookTime", bookTime);
-                intent.putExtra("patientName", patientName);
-                intent.putExtra("phone", phone);
-                intent.putExtra("street", street);
-                intent.putExtra("province", province);
-                intent.putExtra("city", city);
-                intent.putExtra("barangay", barangay);
+                DecimalFormat decimalFormat = new DecimalFormat("0.00");
+                Double servprice = Double.parseDouble(servicePrice);
+                Double total_fee;
+                total_fee = (100 + 50) + servprice;
 
-                finish();
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                final String total = String.valueOf(decimalFormat.format(total_fee));
+
+
+                LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+                View popUpView = inflater.inflate(R.layout.popup_details, null);
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        BookingFinishActivity.this);
+
+                alertDialogBuilder.setView(popUpView);
+
+                TextView service_name = (TextView)popUpView.findViewById(R.id.service_name);
+                TextView service_price = (TextView)popUpView.findViewById(R.id.service_price);
+                TextView myaddress = (TextView)popUpView.findViewById(R.id.patient_address);
+                TextView lab_name = (TextView)popUpView.findViewById(R.id.lab_name);
+                TextView date = (TextView)popUpView.findViewById(R.id.bookDate);
+                TextView time = (TextView)popUpView.findViewById(R.id.bookTime);
+                TextView service_price2 = (TextView)popUpView.findViewById(R.id.service_price2);
+                TextView totalfee = (TextView)popUpView.findViewById(R.id.totalfee);
+
+                service_name.setText(serviceName);
+                service_price.setText("P "+ servicePrice);
+                myaddress.setText(address);
+                lab_name.setText(labName);
+                date.setText(bookDate);
+                time.setText(bookTime);
+                service_price2.setText("P "+ servicePrice);
+                totalfee.setText("P " + total);
+
+                alertDialogBuilder
+                        .setCancelable(false)
+                        .setPositiveButton("Done", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                finish();
+                                startActivity(new Intent(BookingFinishActivity.this, BaseActivity.class));
+                            }
+                        })
+                        .setNegativeButton("Back", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                alertDialog.show();
             }
         });
 

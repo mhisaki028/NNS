@@ -22,9 +22,10 @@
         android:layout_below="@id/app_bar_labinfo">
 
         <ImageView
+            android:layout_centerHorizontal="true"
             android:id="@+id/lab_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:padding="10dp"
             android:background="@drawable/circlebackground"
             android:layout_marginLeft="20dp"
@@ -33,29 +34,31 @@
 
 
         <TextView
-            android:layout_toRightOf="@id/lab_image"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/lab_image"
             android:id="@+id/lab_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/textcolor"
-            android:textSize="18sp"
+            android:textSize="24sp"
             android:text="Laboratory Name"
-            android:fontFamily="@font/monsterratmed"
-            android:layout_marginTop="15dp"
+            android:fontFamily="@font/monsterratbold"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"/>
 
         <TextView
+            android:layout_centerHorizontal="true"
             android:layout_below="@id/lab_name"
-            android:layout_toRightOf="@id/lab_image"
             android:id="@+id/lab_desc"
             android:layout_width="wrap_content"
             android:text="Description"
-            android:textSize="14sp"
+            android:textSize="15sp"
             android:textColor="@color/labdesc_textcolor"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="3dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"/>
 
 
 
@@ -79,7 +82,7 @@
             android:fontFamily="@font/monsterratmed"
             android:text="About"
             android:textColor="@color/lababout_textcolor"
-            android:textSize="14sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/lab_about"
@@ -87,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="About the Laboratory"
-            android:textSize="12sp"
+            android:textSize="17sp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
@@ -114,7 +117,7 @@
             android:layout_height="wrap_content"
             android:text="Address and Schedule"
             android:fontFamily="@font/monsterratmed"
-            android:textSize="14sp"
+            android:textSize="17sp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:textColor="@color/lababout_textcolor"
@@ -122,11 +125,11 @@
 
         <ImageView
             android:id="@+id/placeholder"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
             android:layout_below="@id/txtaddress"
             android:src="@drawable/icon_placeholder"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="12dp"
             android:layout_marginLeft="20dp"
             />
         <TextView
@@ -135,7 +138,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Address"
-            android:textSize="12sp"
+            android:textSize="17sp"
             android:layout_toRightOf="@id/placeholder"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="30dp"
@@ -145,11 +148,11 @@
             />
         <ImageView
             android:id="@+id/time"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
             android:layout_below="@id/lab_loc"
             android:src="@drawable/icon_time"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="12dp"
             android:layout_marginLeft="20dp"
             />
 
@@ -159,7 +162,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lab Schedule"
-            android:textSize="12sp"
+            android:textSize="17sp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/time"
             android:layout_marginLeft="10dp"
@@ -170,18 +173,6 @@
 
 
     </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rel4"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@id/rel3"
-        android:layout_width="match_parent"
-        android:layout_height="144dp"
-        android:background="@color/background_opacity">
-
-
-    </RelativeLayout>
-
 
 
 </RelativeLayout>

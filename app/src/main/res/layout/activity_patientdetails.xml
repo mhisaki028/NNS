@@ -18,44 +18,56 @@
 
             <TextView
                 android:id="@+id/txtcomplete"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="25dp"
                 android:text="Fill-up the forms"
                 android:fontFamily="@font/monsterratbold"
-                android:textSize="34sp"
+                android:textSize="24sp"
                 android:textColor="@color/black"/>
-            <Button
+
+            <EditText
+                android:padding="5dp"
                 android:id="@+id/btnuser"
-                android:layout_toLeftOf="@id/btnother"
-                android:layout_below="@id/txtcomplete"
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
+                android:gravity="center"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:layout_below="@id/txtcomplete"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-35dp"
+                android:layout_toRightOf="@id/txtcomplete"
+                android:background="@drawable/edt_signup_bg"
+                android:fontFamily="@font/monsterratbold"
                 android:text="User"
                 android:textAllCaps="false"
                 android:textColor="@color/dateselected_color"
-                android:fontFamily="@font/monsterratbold"
-                android:textSize="17sp"/>
-            <Button
+                android:textSize="17sp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+            <EditText
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:layout_marginTop="-35dp"
                 android:id="@+id/btnother"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@id/btnuser"
                 android:layout_below="@id/txtcomplete"
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@drawable/edt_signup_bg"
                 android:text="Other"
                 android:textAllCaps="false"
                 android:textColor="@color/darkertext"
                 android:fontFamily="@font/monsterratbold"
-                android:textSize="17sp"/>
+                android:textSize="17sp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
 
             <EditText
                 android:id="@+id/edtPatientName"
                 android:paddingLeft="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
                 android:layout_below="@id/btnuser"
@@ -64,27 +76,68 @@
                 android:inputType="text"
                 android:textSize="14sp"
                 android:textColorHint="@color/hint_defaultcolor"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"/>
-
-
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
 
             <EditText
-                android:id="@+id/edtPhone"
+                android:id="@+id/edtStreet"
                 android:paddingLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
                 android:layout_below="@id/edtPatientName"
                 android:background="@drawable/edt_signup_bg"
-                android:hint="Mobile Number"
-                android:inputType="phone"
+                android:hint="House No., Building and Street Name"
                 android:textSize="14sp"
+                android:inputType="text"
                 android:textColorHint="@color/hint_defaultcolor"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
 
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"/>
 
+            <EditText
+                android:id="@+id/spinnerProvince"
+                android:layout_below="@id/edtStreet"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/edt_signup_bg"
+                android:inputType="text"
+                android:hint="Province"
+                android:paddingLeft="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/hint_defaultcolor" />
+
+            <EditText
+                android:id="@+id/spinnerCity"
+                android:layout_below="@id/spinnerProvince"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@drawable/edt_signup_bg"
+                android:textSize="14sp"
+                android:hint="City"
+                android:paddingLeft="20dp"
+                android:textColor="@color/hint_defaultcolor"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="100dp"/>
+
+            <EditText
+                android:id="@+id/spinnerBarangay"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_below="@id/spinnerCity"
+                android:background="@drawable/edt_signup_bg"
+                android:textSize="14sp"
+                android:textColor="@color/hint_defaultcolor"
+                android:hint="Barangay"
+                android:paddingLeft="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
 
 
         </RelativeLayout>
@@ -97,99 +150,38 @@
             android:layout_below="@id/rel1"
             android:layout_marginTop="5dp">
 
-            <ImageView
-                android:id="@+id/placeholder"
-                android:layout_width="19dp"
-                android:layout_height="19dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp"
-                android:src="@drawable/icon_placeholder"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/placeholder"
-                android:text="Location"
-                android:textSize="17sp"
-                android:textColor="@color/textcolor"
-                android:layout_marginTop="17dp"
-                android:fontFamily="@font/monsterratbold"/>
-
             <EditText
-                android:id="@+id/edtStreet"
+                android:id="@+id/edtPhone"
                 android:paddingLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
-                android:layout_below="@id/placeholder"
                 android:background="@drawable/edt_signup_bg"
-                android:hint="House No., Building and Street Name"
+                android:hint="Mobile Number"
+                android:inputType="phone"
                 android:textSize="14sp"
-                android:inputType="text"
                 android:textColorHint="@color/hint_defaultcolor"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"/>
-
-            <EditText
-                android:id="@+id/spinnerProvince"
-                android:layout_below="@id/edtStreet"
-                android:layout_width="150dp"
-                android:layout_height="41dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/edt_signup_bg"
-                android:inputType="text"
-                android:hint="Province"
-               android:paddingLeft="20dp"
-                android:textSize="14sp"
-                android:textColor="@color/hint_defaultcolor" />
-
-            <EditText
-                android:id="@+id/spinnerCity"
-                android:layout_below="@id/edtStreet"
-                android:layout_marginTop="20dp"
-                android:layout_width="150dp"
-                android:layout_height="41dp"
-                android:background="@drawable/edt_signup_bg"
-                android:textSize="14sp"
-                android:hint="City"
-                android:paddingLeft="20dp"
-                android:layout_alignParentRight="true"
-                android:textColor="@color/hint_defaultcolor"
-                android:layout_marginRight="15dp"/>
-
-            <EditText
-                android:id="@+id/spinnerBarangay"
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_below="@id/spinnerCity"
-                android:background="@drawable/edt_signup_bg"
-                android:textSize="14sp"
-                android:textColor="@color/hint_defaultcolor"
-                android:hint="Barangay"
-                android:paddingLeft="20dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="100dp"/>
 
 
             <Button
                 android:id="@+id/btnContinue"
-
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
-                android:layout_height="41dp"
+                android:layout_height="45dp"
                 android:layout_marginLeft="100dp"
                 android:layout_marginRight="100dp"
                 android:text="Continue"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="14sp"
+                android:textSize="15sp"
                 android:fontFamily="@font/monsterratbold"
                 android:background="@drawable/btnsignup_bg"
                 android:layout_marginBottom="30dp"/>
+
+
+
 
 
 

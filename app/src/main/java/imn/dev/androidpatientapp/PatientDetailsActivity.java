@@ -46,15 +46,15 @@ import imn.dev.androidpatientapp.Model.Bookings;
 
 public class PatientDetailsActivity extends AppCompatActivity {
 
-    EditText edtPatientName, edtPhone, edtStreet, spinnerBarangay, spinnerProvince, spinnerCity;
-    Button btnContinue, btnuser, btnother;
+    EditText edtPatientName, edtPhone, edtStreet, spinnerBarangay, spinnerProvince, spinnerCity, btnuser, btnother;
+    Button btnContinue;
 
 
     FirebaseAuth auth;
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
     RequestQueue requestQueue;
-    String insertUrl = "http://192.168.43.174/androidconn/insertBooking.php";
+    String insertUrl = "http://10.0.10.126/androidconn/insertBooking.php";
 
 
 
@@ -88,8 +88,8 @@ public class PatientDetailsActivity extends AppCompatActivity {
         spinnerProvince = (EditText) findViewById(R.id.spinnerProvince);
 
 
-        btnuser = (Button) findViewById(R.id.btnuser);
-        btnother = (Button) findViewById(R.id.btnother);
+        btnuser = (EditText) findViewById(R.id.btnuser);
+        btnother = (EditText) findViewById(R.id.btnother);
 
         FirebaseUser user = auth.getCurrentUser();
         final String phone = getIntent().getStringExtra("phone");
@@ -102,8 +102,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
         else{
             edtPatientName.setText("");
             edtPatientName.setEnabled(true);
-            edtPhone.setEnabled(false);
-            edtPhone.setText(phone);
+
         }
 
 
@@ -121,8 +120,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
                 else{
                     edtPatientName.setText("");
                     edtPatientName.setEnabled(true);
-                    edtPhone.setEnabled(false);
-                    edtPhone.setText(phone);
+
                 }
 
             }
@@ -169,34 +167,40 @@ public class PatientDetailsActivity extends AppCompatActivity {
                 final String province = spinnerProvince.getText().toString();
                 final String address = street + " " + barangay + " " + city + ", " + province;
 
+
                 if(TextUtils.isEmpty(street)){
                     edtStreet.setBackgroundResource(R.drawable.edt_signin_error);
                     edtStreet.setHint("Please fill-out this form");
                     edtStreet.setHintTextColor(Color.parseColor("#D03E2F"));
+                    return;
                 }
 
                 if(TextUtils.isEmpty(barangay)){
                     spinnerBarangay.setBackgroundResource(R.drawable.edt_signin_error);
                     spinnerBarangay.setHint("Please fill-out this form");
                     spinnerBarangay.setHintTextColor(Color.parseColor("#D03E2F"));
+                    return;
                 }
 
                 if(TextUtils.isEmpty(city)){
                     spinnerCity.setBackgroundResource(R.drawable.edt_signin_error);
                     spinnerCity.setHint("Please fill-out this form");
                     spinnerCity.setHintTextColor(Color.parseColor("#D03E2F"));
+                    return;
                 }
 
                 if(TextUtils.isEmpty(province)){
                     spinnerProvince.setBackgroundResource(R.drawable.edt_signin_error);
                     spinnerProvince.setHint("Please fill-out this form");
                     spinnerProvince.setHintTextColor(Color.parseColor("#D03E2F"));
+                    return;
                 }
 
                 if(TextUtils.isEmpty(phone)){
                     edtPhone.setBackgroundResource(R.drawable.edt_signin_error);
                     edtPhone.setHint("Please enter your mobile number");
                     edtPhone.setHintTextColor(Color.parseColor("#D03E2F"));
+                    return;
                 }
 
                 DecimalFormat decimalFormat = new DecimalFormat("0.00");
@@ -217,24 +221,13 @@ public class PatientDetailsActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
 
                                 Bookings bookings = new Bookings();
-                                bookings.setPatient_name(patientName);
+                                bookings.setDate(bookDate);
                                 bookings.setLab_name(labName);
                                 bookings.setService_name(serviceName);
 
-                                databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                        .setValue(bookings)
-                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
+                                DatabaseReference newRef = databaseReference.push();
+                                newRef.setValue(bookings);
 
-                                            }
-                                        })
-                                        .addOnFailureListener(new OnFailureListener() {
-                                            @Override
-                                            public void onFailure(@NonNull Exception e) {
-
-                                            }
-                                        });
 
                                 //Book
                                 StringRequest request = new StringRequest(Request.Method.POST, insertUrl, new Response.Listener<String>() {
@@ -250,6 +243,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
                                 }){
                                     @Override
                                     protected Map<String, String> getParams() throws AuthFailureError {
+
                                         Map<String, String> parameters = new HashMap<String, String>();
 
                                         parameters.put("patient_name", patientName);
@@ -275,8 +269,13 @@ public class PatientDetailsActivity extends AppCompatActivity {
                                 intent.putExtra("bookTime", bookTime);
                                 intent.putExtra("patientName", patientName);
                                 intent.putExtra("phone", phone);
-                                intent.putExtra("address", address);
                                 intent.putExtra("totalfee", total);
+                                intent.putExtra("street", street);
+                                intent.putExtra("barangay", barangay);
+                                intent.putExtra("city", city);
+                                intent.putExtra("province", province);
+                                intent.putExtra("address", address);
+
                                 finish();
                                 startActivity(intent);
                                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);

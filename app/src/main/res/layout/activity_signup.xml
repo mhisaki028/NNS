@@ -41,10 +41,10 @@
             android:background="@drawable/edt_signup_bg"
             android:hint="Full Name"
             android:inputType="text"
-            android:textSize="14sp"
+            android:textSize="15sp"
             android:textColorHint="@color/hint_defaultcolor"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp"/>
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
 
         <EditText
             android:id="@+id/edtEmail"
@@ -55,11 +55,11 @@
             android:layout_below="@id/edtName"
             android:background="@drawable/edt_signup_bg"
             android:hint="E-mail"
-            android:textSize="14sp"
+            android:textSize="15sp"
             android:inputType="textEmailAddress"
             android:textColorHint="@color/hint_defaultcolor"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp"/>
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
 
         <EditText
             android:id="@+id/edtPassword"
@@ -70,11 +70,11 @@
             android:layout_below="@id/edtEmail"
             android:background="@drawable/edt_signup_bg"
             android:hint="Password"
-            android:textSize="14sp"
+            android:textSize="15sp"
             android:inputType="textPassword"
             android:textColorHint="@color/hint_defaultcolor"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp"/>
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
 
         <EditText
             android:id="@+id/edtPhone"
@@ -85,11 +85,11 @@
             android:layout_below="@id/edtPassword"
             android:background="@drawable/edt_signup_bg"
             android:hint="Mobile Number"
-            android:textSize="14sp"
+            android:textSize="15sp"
             android:inputType="phone"
             android:textColorHint="@color/hint_defaultcolor"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp"/>
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
 
         <CheckBox
             android:id="@+id/checkbox_signup"
@@ -107,7 +107,7 @@
             android:layout_below="@id/edtPhone"
             android:layout_marginTop="20dp"
             android:layout_marginRight="80dp"
-            android:textSize="11sp"
+            android:textSize="12sp"
             android:textColor="@color/subtitle_textcolor"
             android:text="I agree to myMDLab's Terms of Usage and for my personaldata to be processed according to myMDLAb Privacy Policy"
             />
@@ -139,7 +139,7 @@
             android:text="Sign Up"
             android:textAllCaps="false"
             android:textColor="@color/subtitle_textcolor"
-            android:textSize="14sp"
+            android:textSize="15sp"
             android:fontFamily="@font/monsterratbold"
             android:background="@drawable/btn_disabled"
             android:visibility="visible"/>

@@ -1,9 +1,12 @@
 package imn.dev.androidpatientapp;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.pm.SigningInfo;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -42,8 +45,8 @@ import androidx.appcompat.widget.Toolbar;
 
 public class SignInActivity extends AppCompatActivity {
 
-    private EditText edtEmail, edtPassword;
-    private Button btnSignUp, btnSignIn, btnForgotPassword;
+    private EditText edtEmail, edtPassword, btnSignUp;
+    private Button btnSignIn, btnForgotPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
     RelativeLayout rootLayout;
@@ -52,6 +55,7 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
+
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
@@ -73,7 +77,7 @@ public class SignInActivity extends AppCompatActivity {
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtPassword = (EditText) findViewById(R.id.edtPassword);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        btnSignUp = (Button) findViewById(R.id.btnSignUp);
+        btnSignUp = (EditText) findViewById(R.id.btnSignUp);
         btnSignIn = (Button) findViewById(R.id.btnSignIn);
         btnForgotPassword = (Button) findViewById(R.id.btnForgotPassword);
 
@@ -89,7 +93,7 @@ public class SignInActivity extends AppCompatActivity {
         btnForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(SignInActivity.this, ResetPasswordActivity.class));
+                startActivity(new Intent(SignInActivity.this, ResetPasswordActivity.class));
             }
         });
 

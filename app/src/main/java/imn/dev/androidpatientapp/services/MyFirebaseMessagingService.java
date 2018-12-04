@@ -17,31 +17,7 @@ import java.util.Map;
 import androidx.core.app.NotificationCompat;
 import imn.dev.androidpatientapp.LabResultActivity;
 
-
-
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
-    //private static final String TITLE = "title";
-    //private static final String EMPTY = "";
-    //private static final String MESSAGE = "message";
-    //private static final String IMAGE = "image";
-    //private static final String ACTION = "action";
-    //private static final String DATA = "data";
-    //private static final String ACTION_DESTINATION = "action_destination";
-
-   /* @Override
-    public void onMessageReceived(RemoteMessage remoteMessage) {
-        super.onMessageReceived(remoteMessage);
-
-        //if(remoteMessage.getData().isEmpty())
-           // showNotification(remoteMessage.getNotification().getTitle(),remoteMessage.getNotification().getBody());
-        //else
-            //showNotification(remoteMessage.getData());
-
-    }*/
-     /*
-    We need this service only if we want to receive notification payloads,
-     and so onsend upstream messages
-     */
 
     public MyFirebaseMessagingService() {
     }
@@ -110,77 +86,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void onSendError(String s, Exception e) {
         super.onSendError(s, e);
     }
-/*
-    private void showNotification(Map<String, String> data){
-        String title = data.get("title").toString();
-        String body = data.get("body").toString();
-
-        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        String NOTIFICATION_CHANNEL_ID = "imn.dev.androidpatientapp.test";
-
-
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Notification",
-                    NotificationManager.IMPORTANCE_DEFAULT);
-
-            notificationChannel.setDescription("IMN Channel");
-            notificationChannel.enableLights(true);
-            notificationChannel.setLightColor(Color.BLUE);
-            notificationChannel.setVibrationPattern(new long[]{0,1000,500,1000});
-            notificationChannel.enableLights(true);
-            notificationManager.createNotificationChannel(notificationChannel);
-
-        }
-
-
-
-        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID);
-        notificationBuilder.setAutoCancel(true)
-                .setDefaults(Notification.DEFAULT_ALL)
-                .setWhen(System.currentTimeMillis())
-                .setSmallIcon(R.drawable.ic_google)
-                .setContentTitle(title)
-                .setContentText(body)
-                .setContentInfo("Info");
-        notificationManager.notify(new Random().nextInt(), notificationBuilder.build());
-
-
-    }
-
-    private void showNotification(String title, String body) {
-        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        String NOTIFICATION_CHANNEL_ID = "imn.dev.androidpatientapp.test";
-
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Notification",
-                    NotificationManager.IMPORTANCE_DEFAULT);
-
-            notificationChannel.setDescription("IMN Channel");
-            notificationChannel.enableLights(true);
-            notificationChannel.setLightColor(Color.BLUE);
-            notificationChannel.setVibrationPattern(new long[]{0,1000,500,1000});
-            notificationChannel.enableLights(true);
-            notificationManager.createNotificationChannel(notificationChannel);
-
-
-        }
-
-        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID);
-        notificationBuilder.setAutoCancel(true)
-                .setDefaults(Notification.DEFAULT_ALL)
-                .setWhen(System.currentTimeMillis())
-                .setSmallIcon(R.drawable.ic_google)
-                .setContentTitle(title)
-                .setContentText(body)
-                .setContentInfo("Info");
-        notificationManager.notify(new Random().nextInt(), notificationBuilder.build());
-
-    }
-*/
-
-
-
-
     @Override
     public void onNewToken(String s) {
         super.onNewToken(s);

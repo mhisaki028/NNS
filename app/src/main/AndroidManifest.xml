@@ -18,6 +18,10 @@
         android:roundIcon="@mipmap/mdlablogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity android:name=".SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,47 +29,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".LabServiceActivity" />
+        <activity android:name=".LabTestHelpActivity" />
+        <activity android:name=".LabTestProfileActivity" />
+        <activity android:name=".ChooseLaboratoryActivity" />
+        <activity android:name=".ChooseLaboratory2Activity" />
+        <activity android:name=".LaboratoryProfileActivity" />
+        <activity android:name=".LaboratoryInfoActivity" />
+        <activity android:name=".ReviewsActivity" />
+        <activity android:name=".DateActivity" />
+        <activity android:name=".TimeActivity" />
+        <activity android:name=".ChooseLabTestActivity" />
+        <activity android:name=".PatientDetailsActivity" />
+        <activity android:name=".BookingFinishActivity" />
+        <activity android:name=".BookingHistoryActivity" />
+        <activity android:name=".UserSettingActivity" />
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".LabResultActivity">
+            <intent-filter>
+                <action android:name="imn.dev.androidpatientapp_TARGET_NOTIFICATION" />
 
-        <service android:name=".services.MyFirebaseMessagingService">
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoadingScreenActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".PackagesActivity" />
+
+        <service
+            android:name=".MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
-
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
-        <activity android:name=".BaseActivity"/>
-        <activity android:name=".LabServiceActivity" />
-        <activity android:name=".LabTestHelpActivity"/>
-        <activity android:name=".LabTestProfileActivity"/>
-        <activity android:name=".ChooseLaboratoryActivity" />
-        <activity android:name=".ChooseLaboratory2Activity"/>
-        <activity android:name=".LaboratoryProfileActivity"/>
-        <activity android:name=".LaboratoryInfoActivity"/>
-        <activity android:name=".ReviewsActivity"/>
-        <activity android:name=".DateActivity"/>
-        <activity android:name=".TimeActivity"/>
-        <activity android:name=".ChooseLabTestActivity"/>
-        <activity android:name=".PatientDetailsActivity"/>
-        <activity android:name=".AppointmentDetailsActivity"/>
-        <activity android:name=".BookingFinishActivity"/>
-
-        <activity android:name=".LabResultActivity">
-            <intent-filter>
-                <action android:name="imn.dev.androidpatientapp_TARGET_NOTIFICATION"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".LoadingScreenActivity"/>
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".UserSettingActivity"/>
-        <activity android:name=".BookingHistoryActivity"/>
-        <activity android:name=".PackagesActivity"/>
-
 
     </application>
 

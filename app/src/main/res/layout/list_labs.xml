@@ -1,112 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/android_list_view_tutorial_with_example"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/lab_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/recbackground_colored"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="15dp"/>
 
 
-        <TextView
-            android:layout_toRightOf="@id/lab_image"
-            android:id="@+id/lab_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/textcolor"
-            android:textSize="17sp"
-            android:text="Title"
-            android:fontFamily="@font/monsterratbold"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="20dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/list_bg"
+            android:elevation="5dp">
 
-        <TextView
-            android:layout_below="@id/lab_name"
-            android:layout_toRightOf="@id/lab_image"
-            android:id="@+id/lab_desc"
-            android:layout_width="wrap_content"
-            android:text="Subtitle"
-            android:textSize="15sp"
-            android:textColor="@color/labdesc_textcolor"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="3dp"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/circlebackground_colored"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/lab_image"/>
 
-        <ImageView
-            android:id="@+id/placeholder"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:layout_toRightOf="@id/lab_image"
-            android:layout_below="@id/lab_desc"
-            android:src="@drawable/icon_placeholder"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="7dp"
-            android:tint="@color/colorPrimary"/>
+            <TextView
+                android:layout_toRightOf="@id/lab_image"
+                android:id="@+id/lab_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textcolor"
+                android:textSize="17sp"
+                android:text="Title"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
 
-        <TextView
-            android:layout_below="@id/lab_desc"
-            android:layout_toRightOf="@id/placeholder"
-            android:id="@+id/lab_loc"
-            android:layout_width="wrap_content"
-            android:text="Location"
-            android:textSize="12sp"
-            android:textColor="@color/subtitle_textcolor"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginBottom="15dp"/>
+            <TextView
+                android:layout_toRightOf="@id/lab_image"
+                android:layout_below="@id/lab_name"
+                android:id="@+id/lab_desc"
+                android:layout_width="wrap_content"
+                android:text="Subtitle"
+                android:textSize="15sp"
+                android:textColor="@color/labdesc_textcolor"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"/>
 
-        <TextView
-            android:layout_below="@id/lab_desc"
-            android:layout_toRightOf="@id/lab_loc"
-            android:id="@+id/lab_sched"
-            android:layout_width="wrap_content"
-            android:text="Location"
-            android:textSize="10sp"
-            android:textColor="@color/subtitle_textcolor"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:visibility="gone"/>
+            <ImageView
+                android:layout_toRightOf="@id/lab_image"
+                android:id="@+id/placeholder"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_below="@id/lab_desc"
+                android:src="@drawable/icon_placeholder"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:tint="@color/colorPrimary"/>
 
-        <TextView
-            android:layout_below="@id/lab_desc"
-            android:layout_toRightOf="@id/lab_sched"
-            android:id="@+id/lab_about"
-            android:layout_width="wrap_content"
-            android:text="Location"
-            android:textSize="10sp"
-            android:textColor="@color/subtitle_textcolor"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:visibility="gone"/>
+            <TextView
+                android:layout_below="@id/lab_desc"
+                android:layout_toRightOf="@id/placeholder"
+                android:id="@+id/lab_loc"
+                android:layout_width="wrap_content"
+                android:text="Location"
+                android:textSize="12sp"
+                android:textColor="@color/subtitle_textcolor"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
 
-        <TextView
-            android:layout_below="@id/lab_desc"
-            android:layout_toRightOf="@id/lab_about"
-            android:id="@+id/lab_id"
-            android:layout_width="wrap_content"
-            android:text="Location"
-            android:textSize="10sp"
-            android:textColor="@color/subtitle_textcolor"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:visibility="gone"/>
+            <TextView
+                android:layout_below="@id/lab_desc"
+                android:layout_toRightOf="@id/lab_loc"
+                android:id="@+id/lab_sched"
+                android:layout_width="wrap_content"
+                android:text="Location"
+                android:textSize="10sp"
+                android:textColor="@color/subtitle_textcolor"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_below="@id/lab_desc"
+                android:layout_toRightOf="@id/lab_sched"
+                android:id="@+id/lab_about"
+                android:layout_width="wrap_content"
+                android:text="Location"
+                android:textSize="10sp"
+                android:textColor="@color/subtitle_textcolor"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_below="@id/lab_desc"
+                android:layout_toRightOf="@id/lab_about"
+                android:id="@+id/lab_id"
+                android:layout_width="wrap_content"
+                android:text="Location"
+                android:textSize="10sp"
+                android:textColor="@color/subtitle_textcolor"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"/>
 
 
 
-    </RelativeLayout>
+        </RelativeLayout>
+
+
+
 
 
 </RelativeLayout>

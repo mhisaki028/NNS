@@ -60,8 +60,8 @@
 
             <ImageView
                 android:id="@+id/img1"
-                android:layout_width="23dp"
-                android:layout_height="23dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/icon_user"
                 android:layout_below="@id/divider"
                 android:layout_marginLeft="40dp"
@@ -75,7 +75,7 @@
                 android:layout_below="@id/divider"
                 android:layout_toRightOf="@id/img1"
                 android:layout_marginLeft="20dp"
-                android:textSize="14sp"
+                android:textSize="15sp"
                 android:fontFamily="@font/monsterratmed"
                 android:textColor="@color/lababout_textcolor"/>
 
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtemail"
                 android:text="not available"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:textColor="@color/darkertext"
                 android:layout_toRightOf="@id/img1"
                 android:layout_marginLeft="20dp"/>
@@ -156,14 +156,14 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="20dp"
                     android:text="Account Setting"
-                    android:textSize="14sp"
+                    android:textSize="17sp"
                     android:textColor="@color/subtitle_textcolor" />
 
                 <ImageView
                     android:layout_marginRight="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_alignParentRight="true"
                     android:src="@drawable/ic_chevron"
                     android:tint="@color/textcolor" />
@@ -196,14 +196,14 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="20dp"
                     android:text="Laboratory Test Results"
-                    android:textSize="14sp"
+                    android:textSize="17sp"
                     android:textColor="@color/subtitle_textcolor" />
 
                 <ImageView
                     android:layout_marginRight="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_alignParentRight="true"
                     android:src="@drawable/ic_chevron"
                     android:tint="@color/textcolor" />
@@ -236,14 +236,14 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="20dp"
                     android:text="Booking History"
-                    android:textSize="14sp"
+                    android:textSize="17sp"
                     android:textColor="@color/subtitle_textcolor" />
 
                 <ImageView
                     android:layout_marginRight="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_alignParentRight="true"
                     android:src="@drawable/ic_chevron"
                     android:tint="@color/textcolor" />
@@ -253,13 +253,14 @@
 
             <ImageView
                 android:id="@+id/btnLogout"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_below="@id/btnHistory"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/circlebackground"
                 android:src="@drawable/icon_logout"
+                android:tint="@color/colorPrimary"
                 android:padding="10dp"/>
 
             <TextView
@@ -269,7 +270,7 @@
                 android:text="Logout"
                 android:fontFamily="@font/monsterratbold"
                 android:textColor="@color/textcolor"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="10dp"/>
 

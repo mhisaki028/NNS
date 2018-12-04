@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/background_popup">
+
+
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/monsterratbold"
+        android:textColor="@color/black"
+        android:text="Add Review"/>
+
+    <TextView
+        android:id="@+id/patient_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:textSize="17sp"
+        android:fontFamily="@font/monsterratbold"
+        android:textColor="@color/textcolor"
+        android:text="Laboratory Name"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/reviewcontent"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_below="@id/txt1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edt_signup_bg"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:paddingLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/btnlike"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reviewcontent"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@id/btndislike"
+        android:layout_marginRight="10dp"
+        android:hint="Like"
+        android:drawableRight="@drawable/ic_like"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:drawableTint="@color/hint_defaultcolor"
+        android:textColorHint="@color/hint_defaultcolor"
+        android:fontFamily="@font/monsterratbold"
+        android:background="@drawable/edt_signup_bg"
+        android:focusableInTouchMode="false"
+        android:focusable="false"/>
+
+    <EditText
+        android:id="@+id/btndislike"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/reviewcontent"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:hint="Dislike"
+        android:drawableRight="@drawable/ic_dislike"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:drawableTint="@color/hint_defaultcolor"
+        android:textColorHint="@color/hint_defaultcolor"
+        android:fontFamily="@font/monsterratbold"
+        android:background="@drawable/edt_signup_bg"
+        android:focusableInTouchMode="false"
+        android:focusable="false"/>
+
+
+
+
+</RelativeLayout>
