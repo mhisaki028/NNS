@@ -45,6 +45,30 @@ public class PackagesActivity extends AppCompatActivity {
         thirdTab.setText("Package 3");
         tabLayout.addTab(thirdTab);
 
+        TabLayout.Tab fourthTab = tabLayout.newTab();
+        thirdTab.setText("Package 4");
+        tabLayout.addTab(fourthTab);
+
+        TabLayout.Tab fifthTab = tabLayout.newTab();
+        thirdTab.setText("Package 5");
+        tabLayout.addTab(fifthTab);
+
+        TabLayout.Tab sixthTab = tabLayout.newTab();
+        thirdTab.setText("Package 6");
+        tabLayout.addTab(sixthTab);
+
+        TabLayout.Tab seventhTab = tabLayout.newTab();
+        thirdTab.setText("Package 7");
+        tabLayout.addTab(seventhTab);
+
+        TabLayout.Tab eightTab = tabLayout.newTab();
+        thirdTab.setText("Package 8");
+        tabLayout.addTab(eightTab);
+
+        TabLayout.Tab ninthTab = tabLayout.newTab();
+        thirdTab.setText("Package 9");
+        tabLayout.addTab(ninthTab);
+
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

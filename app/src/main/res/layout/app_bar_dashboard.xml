@@ -27,11 +27,22 @@
                     android:layout_centerHorizontal="true"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="myMDLab"
+                    android:text="Main Menu"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/monsterratbold"
                     android:textColor="@color/white"
-                    android:textSize="17sp"
+                    android:textSize="20sp"
                     />
+
+                <Button
+                    android:id="@+id/btnhelp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="15dp"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@drawable/ic_help"/>
 
 
 

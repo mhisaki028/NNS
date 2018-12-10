@@ -9,7 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,11 +21,14 @@ public class LabServiceList extends ArrayAdapter<LabService> {
 
     private Activity context;
     private List<LabService> labserviceList;
+    private ArrayList<LabService> arrayList = null;
 
-    public LabServiceList(@NonNull Activity context, List<LabService> labserviceList) {
+    public LabServiceList(@NonNull Activity context, List<LabService> labserviceList, ArrayList<LabService> arrayList) {
         super(context, R.layout.list_labservices, labserviceList);
         this.context = context;
         this.labserviceList = labserviceList;
+        this.arrayList = new ArrayList<LabService>();
+        this.arrayList.addAll(labserviceList);
     }
 
     @NonNull
@@ -41,9 +46,29 @@ public class LabServiceList extends ArrayAdapter<LabService> {
 
         service_name.setText(labservice.getServiceName());
 
+
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
-        service_price.setText(Integer.toString(labservice.getServicePrice()));
+        int sp = labservice.getServicePrice();
+        String servp = String.valueOf(decimalFormat.format(sp));
+        service_price.setText("P " + servp);
 
         return listViewItem;
     }
+
+    public void filter(String charText){
+        charText = charText.toLowerCase(Locale.getDefault());
+        labserviceList.clear();
+        if(charText.length() == 0){
+            labserviceList.addAll(arrayList);
+        }
+        else{
+            for(LabService wp: arrayList){
+               if(wp.getServiceName().toLowerCase(Locale.getDefault()).contains(charText)){
+                   labserviceList.add(wp);
+               }
+            }
+        }
+        notifyDataSetChanged();
+    }
+
 }

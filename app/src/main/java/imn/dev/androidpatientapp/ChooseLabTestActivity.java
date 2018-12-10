@@ -3,12 +3,16 @@ package imn.dev.androidpatientapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Filter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
@@ -21,9 +25,11 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import imn.dev.androidpatientapp.Model.LabService;
 
@@ -33,9 +39,10 @@ public class ChooseLabTestActivity extends AppCompatActivity {
     RelativeLayout rootLayout;
     EditText btnSearch;
     DatabaseReference databaseServices;
-
+    ArrayList<LabService> arrayList;
     ListView listViewServices;
     List<LabService> servicesList;
+
     LabServiceList adapter;
 
 
@@ -60,12 +67,21 @@ public class ChooseLabTestActivity extends AppCompatActivity {
         listViewServices = (ListView) findViewById(R.id.listview_services);
         servicesList = new ArrayList<>();
 
-        btnSearch = (EditText) findViewById(R.id.btnSearch);
-        btnSearch.setOnClickListener(new View.OnClickListener() {
+        search_field.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View v) {
-                String searchtext = search_field.getText().toString();
-                labTestSearch(searchtext);
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String text = search_field.getText().toString().toLowerCase(Locale.getDefault());
+                adapter.filter(text);
             }
         });
 
@@ -73,67 +89,7 @@ public class ChooseLabTestActivity extends AppCompatActivity {
 
     }
 
-    private void labTestSearch(String searchtext) {
-        if (TextUtils.isEmpty(search_field.getText())) {
-            databaseServices.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot snapshot) {
-                    //dismissing the progress dialog
 
-                    //iterating through all the values in database
-                    for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                        LabService service = postSnapshot.getValue(LabService.class);
-                        servicesList.add(service);
-                    }
-                    //creating adapter
-                    adapter = new LabServiceList(ChooseLabTestActivity.this, servicesList);
-
-                    //adding adapter to recyclerview
-
-                    listViewServices.setAdapter(adapter);
-
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-        }else {
-            final Query queryRef = databaseServices.orderByChild("service_name").equalTo(searchtext);
-
-            queryRef.addValueEventListener(new ValueEventListener() {
-                //   adding an event listener to fetch values
-
-                @Override
-                public void onDataChange(DataSnapshot snapshot) {
-                    //dismissing the progress dialog
-
-                    //iterating through all the values in database
-                    for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                        LabService service = postSnapshot.getValue(LabService.class);
-                        servicesList.add(service);
-                    }
-                    //creating adapter
-                    adapter = new LabServiceList(ChooseLabTestActivity.this, servicesList);
-
-                    //adding adapter to recyclerview
-                    if (snapshot.getValue() != null) {
-
-                        listViewServices.setAdapter(adapter);
-                    } else {
-                        servicesList.clear();
-                        listViewServices.setAdapter(null);
-                    }
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-        }
-    }
 
 
     @Override
@@ -151,7 +107,7 @@ public class ChooseLabTestActivity extends AppCompatActivity {
                     servicesList.add(labService);
                 }
 
-                adapter = new LabServiceList(ChooseLabTestActivity.this, servicesList);
+                adapter = new LabServiceList(ChooseLabTestActivity.this, servicesList, arrayList);
                 listViewServices.setAdapter(adapter);
 
                 listViewServices.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -162,17 +118,16 @@ public class ChooseLabTestActivity extends AppCompatActivity {
                         String labName = getIntent().getStringExtra("labName");
                         String labDesc = getIntent().getStringExtra("labDesc");
                         String labLoc = getIntent().getStringExtra("labLoc");
-
-                        String phone = getIntent().getStringExtra("phone");
+                        String labImage = getIntent().getStringExtra("labImage");
 
                         String serviceName = labService.getServiceName();
                         String servicePrice = Integer.toString(labService.getServicePrice());
 
 
                         Intent intent = new Intent(ChooseLabTestActivity.this, DateActivity.class);
-                        intent.putExtra("phone", phone);
 
                         intent.putExtra("labID", labID);
+                        intent.putExtra("labImage", labImage);
                         intent.putExtra("labName", labName);
                         intent.putExtra("labDesc", labDesc);
                         intent.putExtra("labLoc", labLoc);
@@ -192,8 +147,11 @@ public class ChooseLabTestActivity extends AppCompatActivity {
         });
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
+
         if(item.getItemId()==android.R.id.home)
             finish();
 

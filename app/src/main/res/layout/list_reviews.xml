@@ -7,10 +7,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/review_background"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="15dp">
+        android:background="@drawable/list_bg"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
 
 
         <TextView
@@ -18,10 +18,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="17sp"
+            android:textSize="15sp"
+            android:fontFamily="@font/monsterratbold"
             android:text="Name"
-            android:fontFamily="@font/monsterratmed"
             android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/lab_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/subtitle_textcolor"
+            android:textSize="13sp"
+            android:layout_below="@id/patient_name"
+            android:text="Lab Name"
             android:layout_marginLeft="20dp"/>
 
         <TextView
@@ -30,7 +40,7 @@
             android:layout_height="wrap_content"
            android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:layout_alignParentRight="true"
             android:text="Day"/>
 
@@ -40,13 +50,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:layout_alignParentRight="true"
             android:text="Time"/>
 
         <TextView
             android:layout_below="@id/txtTime"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
@@ -55,6 +65,56 @@
             android:text="Review Body"
             android:textColor="@color/black"
             android:id="@+id/txtBody"
+            android:layout_marginBottom="20dp"/>
+
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_below="@id/txtBody"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/icon_star"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/star1"
+            android:layout_below="@id/txtBody"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/star_rate"
+            android:text="3.0"
+            android:textSize="15sp"
+            android:fontFamily="@font/monsterratbold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/star_rate"
+            android:layout_below="@id/txtBody"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:text="Stars"
+            android:textSize="15sp"
+            android:fontFamily="@font/monsterratbold"
+            />
+
+        <TextView
+            android:layout_below="@id/txtBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:textSize="14sp"
+            android:layout_alignParentRight="true"
+            android:text="Rating"
+            android:textColor="@color/white"
+            android:background="@drawable/btnsignup_bg"
+            android:padding="5dp"
+            android:fontFamily="@font/monsterratbold"
+            android:id="@+id/txtRating"
             android:layout_marginBottom="20dp"/>
 
 

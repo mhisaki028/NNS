@@ -109,9 +109,8 @@ public class ProfileFragment extends Fragment {
 
                 progressBar.setVisibility(View.VISIBLE);
                 FirebaseAuth.getInstance().signOut();
-                ((AppCompatActivity)getActivity()).finish();
                 startActivity(new Intent(view.getContext(), SignInActivity.class));
-
+                ((AppCompatActivity)getActivity()).finish();
             }
         });
 

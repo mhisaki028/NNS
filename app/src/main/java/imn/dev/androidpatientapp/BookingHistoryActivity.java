@@ -12,6 +12,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -60,6 +61,8 @@ public class BookingHistoryActivity extends AppCompatActivity {
 
                     bookingsList.add(bookings);
                 }
+
+                Collections.reverse(bookingsList);
 
                 adapter = new HistoryList(BookingHistoryActivity.this, bookingsList);
                 listViewHistory.setAdapter(adapter);

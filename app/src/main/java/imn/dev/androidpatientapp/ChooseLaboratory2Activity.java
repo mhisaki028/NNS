@@ -87,12 +87,12 @@ public class ChooseLaboratory2Activity extends AppCompatActivity {
 
                         Labs labs = (Labs)parent.getItemAtPosition(position);
                         String labID = Integer.toString(labs.getLab_id());
+                        String labImage = labs.getLab_image();
                         String labName = labs.getLab_name();
                         String labDesc = labs.getLab_desc();
                         String labLoc = labs.getLab_loc();
                         String labSched = labs.getLab_sched();
                         String labAbout = labs.getLab_about();
-                        String phone = getIntent().getStringExtra("phone");
                         Intent intent = new Intent(ChooseLaboratory2Activity.this, ChooseLabTestActivity.class);
                         intent.putExtra("labID", labID);
                         intent.putExtra("labName", labName);
@@ -100,7 +100,7 @@ public class ChooseLaboratory2Activity extends AppCompatActivity {
                         intent.putExtra("labLoc", labLoc);
                         intent.putExtra("labSched", labSched);
                         intent.putExtra("labAbout", labAbout);
-                        intent.putExtra("phone", phone);
+                        intent.putExtra("labImage", labImage);
                         startActivity(intent);
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     }

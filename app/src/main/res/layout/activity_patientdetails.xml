@@ -2,76 +2,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/lightgray">
 
     <include layout="@layout/app_bar_patientdetails"
-        android:id="@+id/app_bar_patientdetails"/>
+        android:id="@+id/app_bar_patientdetails"
+        />
 
 
 
         <RelativeLayout
             android:layout_below="@id/app_bar_patientdetails"
             android:id="@+id/rel1"
-            android:background="@color/white"
+            android:background="@drawable/list_bg"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/txtcomplete"
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:text="Fill-up the forms"
-                android:fontFamily="@font/monsterratbold"
-                android:textSize="24sp"
-                android:textColor="@color/black"/>
 
-            <EditText
-                android:padding="5dp"
-                android:id="@+id/btnuser"
-                android:layout_width="80dp"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtcomplete"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="-35dp"
-                android:layout_toRightOf="@id/txtcomplete"
-                android:background="@drawable/edt_signup_bg"
-                android:fontFamily="@font/monsterratbold"
-                android:text="User"
-                android:textAllCaps="false"
-                android:textColor="@color/dateselected_color"
-                android:textSize="17sp"
-                android:focusable="false"
-                android:focusableInTouchMode="false"/>
-            <EditText
-                android:padding="5dp"
-                android:layout_marginLeft="5dp"
-                android:gravity="center"
-                android:layout_marginTop="-35dp"
-                android:id="@+id/btnother"
-                android:layout_toRightOf="@id/btnuser"
-                android:layout_below="@id/txtcomplete"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edt_signup_bg"
-                android:text="Other"
-                android:textAllCaps="false"
-                android:textColor="@color/darkertext"
-                android:fontFamily="@font/monsterratbold"
-                android:textSize="17sp"
-                android:focusable="false"
-                android:focusableInTouchMode="false"/>
 
             <EditText
                 android:id="@+id/edtPatientName"
-                android:paddingLeft="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
                 android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
-                android:layout_below="@id/btnuser"
-                android:background="@drawable/edt_signup_bg"
+                android:background="@drawable/search_layout"
                 android:hint="Patient Full Name"
                 android:inputType="text"
                 android:textSize="14sp"
@@ -86,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
                 android:layout_below="@id/edtPatientName"
-                android:background="@drawable/edt_signup_bg"
+                android:background="@drawable/search_layout"
                 android:hint="House No., Building and Street Name"
                 android:textSize="14sp"
                 android:inputType="text"
@@ -94,61 +53,105 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"/>
 
-
-            <EditText
-                android:id="@+id/spinnerProvince"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/edtStreet"
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_marginRight="100dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="25dp"
-                android:background="@drawable/edt_signup_bg"
-                android:inputType="text"
-                android:hint="Province"
-                android:paddingLeft="20dp"
+                android:id="@+id/textbrgy"
+                android:text="Barangay"
+                android:textColor="@color/subtitle_textcolor"
                 android:textSize="14sp"
-                android:textColor="@color/hint_defaultcolor" />
+                android:fontFamily="@font/monsterratbold"/>
 
-            <EditText
-                android:id="@+id/spinnerCity"
-                android:layout_below="@id/spinnerProvince"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:background="@drawable/edt_signup_bg"
-                android:textSize="14sp"
-                android:hint="City"
-                android:paddingLeft="20dp"
-                android:textColor="@color/hint_defaultcolor"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="100dp"/>
-
-            <EditText
+            <Spinner
                 android:id="@+id/spinnerBarangay"
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
-                android:layout_below="@id/spinnerCity"
-                android:background="@drawable/edt_signup_bg"
+                android:layout_below="@id/textbrgy"
                 android:textSize="14sp"
                 android:textColor="@color/hint_defaultcolor"
                 android:hint="Barangay"
                 android:paddingLeft="20dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="100dp"
+                android:entries="@array/barangay"
+                android:spinnerMode="dialog"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerBarangay"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"/>
+                android:id="@+id/textcity"
+                android:text="City"
+                android:textColor="@color/subtitle_textcolor"
+                android:textSize="14sp"
+                android:fontFamily="@font/monsterratbold"/>
+
+
+
+            <Spinner
+                android:id="@+id/spinnerCity"
+                android:layout_below="@id/textcity"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:textSize="14sp"
+                android:hint="City"
+                android:paddingLeft="20dp"
+                android:textColor="@color/hint_defaultcolor"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="100dp"
+                android:entries="@array/city"
+                android:spinnerMode="dialog"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerCity"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/textprov"
+                android:text="Province"
+                android:textColor="@color/subtitle_textcolor"
+                android:textSize="14sp"
+                android:fontFamily="@font/monsterratbold"/>
+
+            <Spinner
+                android:id="@+id/spinnerProvince"
+                android:layout_below="@id/textprov"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginLeft="25dp"
+
+                android:inputType="text"
+                android:hint="Province"
+                android:paddingLeft="20dp"
+                android:textSize="14sp"
+                android:entries="@array/province"
+                android:layout_marginBottom="20dp"
+                android:spinnerMode="dialog"/>
+
+
 
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:background="@color/white"
+            android:background="@drawable/list_bg"
             android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/rel1"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
 
             <EditText
                 android:id="@+id/edtPhone"
@@ -156,13 +159,13 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
-                android:background="@drawable/edt_signup_bg"
+                android:background="@drawable/search_layout"
                 android:hint="Mobile Number"
                 android:inputType="phone"
                 android:textSize="14sp"
                 android:textColorHint="@color/hint_defaultcolor"
                 android:layout_marginLeft="25dp"
-                android:layout_marginRight="100dp"/>
+                android:layout_marginRight="25dp"/>
 
 
             <Button

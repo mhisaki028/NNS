@@ -8,30 +8,18 @@
     tools:context=".DashboardFragment"
     android:focusableInTouchMode="true"
     android:focusable="true"
-    android:background="@color/white">
+    android:background="@color/lightgray">
 
     <include
         android:id="@+id/app_bar_dashboard"
         layout="@layout/app_bar_dashboard" />
 
-    <TextView
-        android:id="@+id/txthome"
-        android:text="Main Menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/app_bar_dashboard"
-        android:fontFamily="@font/monsterratbold"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="25dp"
-        android:textSize="34sp"/>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txthome"
+        android:layout_below="@id/app_bar_dashboard"
 
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="30dp">
 
 
     <ListView

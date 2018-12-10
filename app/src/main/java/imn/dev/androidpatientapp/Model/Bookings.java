@@ -2,16 +2,19 @@ package imn.dev.androidpatientapp.Model;
 
 public class Bookings {
 
-    String date, lab_name, service_name;
+    String date, lab_name, service_name, lab_image, time;
 
     public Bookings(){
 
     }
 
-    public Bookings(String date, String lab_name, String service_name) {
+    public Bookings(String date, String lab_name, String service_name, String lab_image, String time) {
         this.date = date;
         this.lab_name = lab_name;
         this.service_name = service_name;
+        this.lab_image = lab_image;
+        this.time = time;
+
     }
 
     public String getDate() {
@@ -36,5 +39,21 @@ public class Bookings {
 
     public void setService_name(String service_name) {
         this.service_name = service_name;
+    }
+
+    public String getLab_image() {
+        return lab_image;
+    }
+
+    public void setLab_image(String lab_image) {
+        this.lab_image = lab_image;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }

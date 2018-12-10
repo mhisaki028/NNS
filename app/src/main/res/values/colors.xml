@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#27A9A2</color>
-    <color name="colorPrimaryDark">#2091A0</color>
+    <color name="colorPrimaryDark">#27A9A2</color>
     <color name="colorPrimaryLight">#31CBA5</color>
     <color name="colorAccent">#19769F</color>
     <color name="facebookBlue">#3F5996</color>
@@ -9,6 +9,7 @@
     <color name="red">#AE1F23</color>
     <color name="black">#000000</color>
     <color name="search_color">#EAEBED</color>
+    <color name="darkaccent">#2091A0</color>
 
     <color name="btnsignin_textcolor">#19769F</color>
     <color name="hint_defaultcolor">#9A9A9A</color>

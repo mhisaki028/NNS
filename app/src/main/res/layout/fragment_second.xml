@@ -17,7 +17,7 @@
         <TextView
             android:id="@+id/price"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Php 1,295"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="Package 2"
             android:textColor="@color/white"
-            android:textSize="14sp"/>
+            android:textSize="20sp"/>
 
         <ImageView
             android:id="@+id/divider"
@@ -52,10 +52,9 @@
             android:layout_below="@id/divider"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:text="FBS (Diabetes)"
-            android:fontFamily="@font/monsterratmed"
             android:textColor="@color/white"
             android:textSize="20sp"/>
 
@@ -66,7 +65,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="BUN (Kidney)"
-            android:fontFamily="@font/monsterratmed"
             android:textColor="@color/white"
             android:textSize="20sp"/>
 
@@ -77,7 +75,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Uric Acid (Gout)"
-            android:fontFamily="@font/monsterratmed"
             android:textColor="@color/white"
             android:textSize="20sp"/>
 
@@ -88,7 +85,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Cholesterol (Heart)"
-            android:fontFamily="@font/monsterratmed"
             android:textColor="@color/white"
             android:textSize="20sp"/>
 
@@ -99,7 +95,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Triglycerides (Heart)"
-            android:fontFamily="@font/monsterratmed"
             android:textColor="@color/white"
             android:textSize="20sp"/>
 
@@ -111,7 +106,6 @@
             android:layout_centerHorizontal="true"
             android:text="HDL (Good Cholesterol)"
             android:textColor="@color/white"
-            android:fontFamily="@font/monsterratmed"
             android:textSize="20sp" />
 
         <TextView
@@ -120,7 +114,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/hdl"
             android:layout_centerHorizontal="true"
-            android:fontFamily="@font/monsterratmed"
             android:text="LDL (Bad Cholesterol)"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -133,7 +126,6 @@
             android:layout_centerHorizontal="true"
             android:text="SGPT (Liver)"
             android:textColor="@color/white"
-            android:fontFamily="@font/monsterratmed"
             android:textSize="20sp" />
 
         <TextView
@@ -144,8 +136,32 @@
             android:layout_centerHorizontal="true"
             android:text="Urinalysis"
             android:textColor="@color/white"
-            android:fontFamily="@font/monsterratmed"
             android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnavail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/urine"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edt_signin_bg"
+            android:text="Avail Now"
+            android:textColor="@color/white"
+            android:fontFamily="@font/monsterratbold"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Only Available at LC Diagnostic Center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/monsterratbold"/>
 
 
 

@@ -34,7 +34,7 @@ public class LoadingScreenActivity extends AppCompatActivity {
 
     public void progressAnimation(){
         ProgressBarAnimation animation = new ProgressBarAnimation(this, progressBar, textView,0f, 100f);
-        animation.setDuration(3000);
+        animation.setDuration(2500);
         progressBar.setAnimation(animation);
     }
 }

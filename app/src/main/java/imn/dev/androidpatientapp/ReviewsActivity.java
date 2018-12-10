@@ -12,6 +12,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -63,6 +64,8 @@ public class ReviewsActivity extends AppCompatActivity {
 
                     reviewsList.add(reviews);
                 }
+
+                Collections.reverse(reviewsList);
 
                 adapter = new ReviewsList(ReviewsActivity.this, reviewsList);
                 listViewReviews.setAdapter(adapter);

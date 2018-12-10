@@ -92,6 +92,7 @@ public class ChooseLaboratoryActivity extends AppCompatActivity {
                         String labLoc = labs.getLab_loc();
                         String labSched = labs.getLab_sched();
                         String labAbout = labs.getLab_about();
+                        String labImage = labs.getLab_image();
                         String phone = getIntent().getStringExtra("phone");
                         Intent intent = new Intent(ChooseLaboratoryActivity.this, LaboratoryProfileActivity.class);
                         intent.putExtra("labID", labID);
@@ -100,7 +101,7 @@ public class ChooseLaboratoryActivity extends AppCompatActivity {
                         intent.putExtra("labLoc", labLoc);
                         intent.putExtra("labSched", labSched);
                         intent.putExtra("labAbout", labAbout);
-                        intent.putExtra("phone", phone);
+                        intent.putExtra("labImage", labImage);
                         startActivity(intent);
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     }

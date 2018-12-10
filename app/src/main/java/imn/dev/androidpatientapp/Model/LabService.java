@@ -4,6 +4,7 @@ public class LabService {
 
     String service_id;
     String service_name;
+    String service_desc;
     int service_price;
 
 
@@ -11,10 +12,11 @@ public class LabService {
 
     }
 
-    public LabService(String service_id, String service_name, int service_price) {
+    public LabService(String service_id, String service_name, String service_desc, int service_price) {
         this.service_id = service_id;
         this.service_name = service_name;
         this.service_price = service_price;
+        this.service_desc = service_desc;
     }
 
     public String getServiceId() {
@@ -27,5 +29,9 @@ public class LabService {
 
     public int getServicePrice() {
         return service_price;
+    }
+
+    public String getService_desc() {
+        return service_desc;
     }
 }

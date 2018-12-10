@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +19,7 @@ public class LaboratoryProfileActivity extends AppCompatActivity {
 
     RelativeLayout btnLabInfo, btnReviews;
     TextView lab_name, lab_desc;
+    ImageView lab_image;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +38,7 @@ public class LaboratoryProfileActivity extends AppCompatActivity {
         btnReviews = (RelativeLayout) findViewById(R.id.btnReviews);
         lab_name = (TextView) findViewById(R.id.lab_name);
         lab_desc = (TextView) findViewById(R.id.lab_desc);
+        lab_image = (ImageView) findViewById(R.id.lab_image);
 
         final String labID = getIntent().getStringExtra("labID");
         final String labName = getIntent().getStringExtra("labName");
@@ -41,9 +46,12 @@ public class LaboratoryProfileActivity extends AppCompatActivity {
         final String labLoc = getIntent().getStringExtra("labLoc");
         final String labSched = getIntent().getStringExtra("labSched");
         final String labAbout = getIntent().getStringExtra("labAbout");
+        final String labImage = getIntent().getStringExtra("labImage");
 
         lab_name.setText(labName);
         lab_desc.setText(labDesc);
+
+        Glide.with(getApplicationContext()).load(labImage).into(lab_image);
 
         btnLabInfo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +64,7 @@ public class LaboratoryProfileActivity extends AppCompatActivity {
                 intent.putExtra("labLoc", labLoc);
                 intent.putExtra("labSched", labSched);
                 intent.putExtra("labAbout", labAbout);
+                intent.putExtra("labImage", labImage);
 
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);

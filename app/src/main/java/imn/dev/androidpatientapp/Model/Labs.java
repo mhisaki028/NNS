@@ -3,20 +3,21 @@ package imn.dev.androidpatientapp.Model;
 
 public class Labs {
     int lab_id;
-    String lab_name, lab_desc, lab_loc, lab_sched, lab_about;
+    String lab_image, lab_name, lab_desc, lab_loc, lab_sched, lab_about;
 
     public Labs() {
 
     }
 
 
-    public Labs(int lab_id, String lab_name, String lab_desc, String lab_loc, String lab_sched, String lab_about) {
+    public Labs(int lab_id, String lab_image,  String lab_name, String lab_desc, String lab_loc, String lab_sched, String lab_about) {
         this.lab_id = lab_id;
         this.lab_name = lab_name;
         this.lab_desc = lab_desc;
         this.lab_loc = lab_loc;
         this.lab_sched = lab_sched;
         this.lab_about = lab_about;
+        this.lab_image = lab_image;
     }
 
     public int getLab_id() {
@@ -40,5 +41,7 @@ public class Labs {
     }
 
     public String getLab_about() { return lab_about; }
+
+    public String getLab_image() { return lab_image; }
 
 }

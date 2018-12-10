@@ -37,6 +37,9 @@ public class ReviewsList extends ArrayAdapter<Reviews> {
         TextView txtBody = (TextView)listViewItem.findViewById(R.id.txtBody);
         TextView txtDay = (TextView) listViewItem.findViewById(R.id.txtDay);
         TextView txtTime = (TextView) listViewItem.findViewById(R.id.txtTime);
+        TextView txtRating = (TextView) listViewItem.findViewById(R.id.txtRating);
+        TextView lab_name = (TextView) listViewItem.findViewById(R.id.lab_name);
+        TextView star_rate = (TextView) listViewItem.findViewById(R.id.star_rate);
 
 
         Reviews reviews = reviewsList.get(position);
@@ -45,6 +48,9 @@ public class ReviewsList extends ArrayAdapter<Reviews> {
         txtBody.setText(reviews.getTxtBody());
         txtDay.setText(reviews.getTxtDay());
         txtTime.setText(reviews.getTxtTime());
+        txtRating.setText(reviews.getRating());
+        lab_name.setText(reviews.getLab());
+        star_rate.setText(reviews.getStars());
 
 
         return listViewItem;

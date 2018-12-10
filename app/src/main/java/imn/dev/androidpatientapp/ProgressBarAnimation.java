@@ -43,6 +43,7 @@ public class ProgressBarAnimation extends Animation {
             final String labLoc = ((AppCompatActivity)context).getIntent().getStringExtra("labLoc");
             final String serviceName = ((AppCompatActivity)context).getIntent().getStringExtra("serviceName");
             final String servicePrice = ((AppCompatActivity)context).getIntent().getStringExtra("servicePrice");
+            final String serviceDesc = ((AppCompatActivity)context).getIntent().getStringExtra("serviceDesc");
             final String bookDate = ((AppCompatActivity)context).getIntent().getStringExtra("bookDate");
             final String bookTime = ((AppCompatActivity)context).getIntent().getStringExtra("bookTime");
             final String patientName = ((AppCompatActivity)context).getIntent().getStringExtra("patientName");
@@ -58,6 +59,7 @@ public class ProgressBarAnimation extends Animation {
             intent.putExtra("labLoc", labLoc);
             intent.putExtra("serviceName",serviceName);
             intent.putExtra("servicePrice",servicePrice);
+            intent.putExtra("serviceDesc", serviceDesc);
             intent.putExtra("bookDate", bookDate);
             intent.putExtra("bookTime", bookTime);
             intent.putExtra("patientName", patientName);
@@ -65,7 +67,9 @@ public class ProgressBarAnimation extends Animation {
             intent.putExtra("address", address);
             intent.putExtra("totalfee", totalfee);
 
+
             context.startActivity(intent);
+            ((AppCompatActivity)context).finish();
             ((AppCompatActivity)context).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         }
 

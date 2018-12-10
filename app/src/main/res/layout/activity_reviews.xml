@@ -5,31 +5,17 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootLayout"
-    android:background="@color/white">
+    android:background="@color/lightgray">
 
     <include layout="@layout/app_bar_reviews"
         android:id="@+id/app_bar_reviews"/>
 
 
-
-    <TextView
-        android:id="@+id/txttop"
-        android:text="Reviews"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/app_bar_reviews"
-        android:fontFamily="@font/monsterratbold"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="25dp"
-        android:textSize="27sp"/>
-
     <RelativeLayout
         android:id="@+id/rel1"
-        android:layout_below="@id/txttop"
+        android:layout_below="@id/app_bar_reviews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
 
         >
 
@@ -37,7 +23,7 @@
             android:id="@+id/listview_reviews"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:divider="@drawable/list_divider_white">
 
         </ListView>

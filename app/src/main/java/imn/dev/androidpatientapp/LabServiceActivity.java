@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,11 +34,11 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 public class LabServiceActivity extends AppCompatActivity {
 
     EditText search_field;
-    EditText btnSearch;
     DatabaseReference databaseLabServices;
 
     ListView listViewServices;
     List<LabService> labServiceList;
+    ArrayList<LabService> arrayList;
     RelativeLayout rootLayout;
     LabServiceList adapter;
 
@@ -57,83 +58,32 @@ public class LabServiceActivity extends AppCompatActivity {
         }
 
         search_field = (EditText) findViewById(R.id.search_field);
-        btnSearch = (EditText) findViewById(R.id.btnSearch);
         databaseLabServices = FirebaseDatabase.getInstance().getReference("Labservices");
         listViewServices = (ListView)findViewById(R.id.listview_services);
         labServiceList = new ArrayList<>();
 
-        btnSearch.setOnClickListener(new View.OnClickListener() {
+        search_field.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View v) {
-                String searchtext = search_field.getText().toString();
-                labTestSearch(searchtext);
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String text = search_field.getText().toString().toLowerCase(Locale.getDefault());
+                adapter.filter(text);
             }
         });
 
 
     }
 
-    private void labTestSearch(String searchtext) {
-        if (TextUtils.isEmpty(search_field.getText())) {
-            databaseLabServices.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot snapshot) {
-                    //dismissing the progress dialog
 
-                    //iterating through all the values in database
-                    for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                        LabService service = postSnapshot.getValue(LabService.class);
-                        labServiceList.add(service);
-                    }
-                    //creating adapter
-                    adapter = new LabServiceList(LabServiceActivity.this, labServiceList);
-
-                    //adding adapter to recyclerview
-
-                    listViewServices.setAdapter(adapter);
-
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-        }else {
-            final Query queryRef = databaseLabServices.orderByChild("service_name").equalTo(searchtext);
-
-            queryRef.addValueEventListener(new ValueEventListener() {
-                //   adding an event listener to fetch values
-
-                @Override
-                public void onDataChange(DataSnapshot snapshot) {
-                    //dismissing the progress dialog
-
-                    //iterating through all the values in database
-                    for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                        LabService service = postSnapshot.getValue(LabService.class);
-                        labServiceList.add(service);
-                    }
-                    //creating adapter
-                    adapter = new LabServiceList(LabServiceActivity.this, labServiceList);
-
-                    //adding adapter to recyclerview
-                    if (snapshot.getValue() != null) {
-
-                        listViewServices.setAdapter(adapter);
-                    } else {
-                        labServiceList.clear();
-                        listViewServices.setAdapter(null);
-                    }
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-        }
-    }
     @Override
     protected void onStart() {
         super.onStart();
@@ -149,7 +99,7 @@ public class LabServiceActivity extends AppCompatActivity {
                     labServiceList.add(labservice);
                 }
 
-                adapter = new LabServiceList(LabServiceActivity.this, labServiceList);
+                adapter = new LabServiceList(LabServiceActivity.this, labServiceList, arrayList);
                 listViewServices.setAdapter(adapter);
 
             }

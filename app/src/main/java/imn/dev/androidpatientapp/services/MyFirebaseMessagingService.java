@@ -45,7 +45,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
                 .setAutoCancel(true)
-                .setContentTitle("Thank You for your patience. Your Laboratory Test Results are now out and uploaded. Click to view")
+                .setContentTitle("Your Laboratory Test Results are now out. Click to view")
                 .setSmallIcon(android.R.drawable.stat_notify_chat)
                 .setContentIntent(pi);
 

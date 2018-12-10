@@ -2,9 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:focusableInTouchMode="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:background="@color/lightgray">
 
     <include
         android:id="@+id/app_bar_labservices"
@@ -17,26 +17,15 @@
         android:layout_below="@id/app_bar_labservices"
      >
 
-        <TextView
-            android:id="@+id/txttop"
-            android:text="Browse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/app_bar_chooselab"
-            android:fontFamily="@font/monsterratbold"
-            android:textColor="@color/black"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="25dp"
-            android:textSize="34sp"/>
-
         <EditText
             android:id="@+id/search_field"
             android:layout_below="@id/txttop"
+            android:inputType="textFilter"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="25dp"
-            android:layout_marginRight="120dp"
+            android:layout_marginRight="25dp"
             android:background="@drawable/search_layout"
             android:drawableLeft="@drawable/ic_search"
             android:drawableTint="@color/hint_defaultcolor"
@@ -44,27 +33,10 @@
             android:textColorHint="@color/hint_defaultcolor"
             android:textColor="@color/hint_defaultcolor"
             android:textSize="17sp"
-            android:fontFamily="@font/monsterratmed"
+            android:fontFamily="@font/monsterrat"
             android:drawablePadding="20dp"
             android:paddingLeft="10dp" />
 
-        <EditText
-            android:id="@+id/btnSearch"
-            android:layout_below="@id/txttop"
-            android:layout_alignParentRight="true"
-            android:layout_width="60dp"
-            android:gravity="center"
-            android:layout_height="36dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/edt_signup_bg"
-            android:text="GO"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            android:fontFamily="@font/monsterratbold"
-            android:focusable="false"
-            android:focusableInTouchMode="false"/>
 
 
     </RelativeLayout>
@@ -74,7 +46,6 @@
         android:layout_below="@id/rel1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         >
 
         <ListView

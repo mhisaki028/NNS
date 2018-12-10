@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
@@ -111,6 +114,33 @@ public class DashboardFragment extends Fragment {
                 startActivity(intent);
 
 
+            }
+        });
+
+        Button btnhelp = view.findViewById(R.id.btnhelp);
+        btnhelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LayoutInflater inflater = LayoutInflater.from(getActivity());
+                View popUpView = inflater.inflate(R.layout.popup_help, null);
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        getActivity());
+
+                alertDialogBuilder.setView(popUpView);
+
+                alertDialogBuilder
+                        .setCancelable(false)
+                        .setNegativeButton("Done", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                alertDialog.show();
             }
         });
 

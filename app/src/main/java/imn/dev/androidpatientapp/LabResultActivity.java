@@ -8,13 +8,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,6 +37,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -42,6 +46,7 @@ import java.util.TimeZone;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatRatingBar;
 import androidx.appcompat.widget.Toolbar;
 import imn.dev.androidpatientapp.Model.LabService;
 import imn.dev.androidpatientapp.Model.Patient;
@@ -63,7 +68,9 @@ public class LabResultActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
 
     EditText btnlike, btndislike, reviewcontent;
-
+    Spinner spinnerlabs;
+    TextView txtrating, txtnumstar;
+    RatingBar ratingBar;
 
 
     @Override
@@ -97,36 +104,52 @@ public class LabResultActivity extends AppCompatActivity {
         final String patient_name = user.getDisplayName();
         btnlike = (EditText)popUpView.findViewById(R.id.btnlike);
         btndislike = (EditText)popUpView.findViewById(R.id.btndislike);
+        spinnerlabs = (Spinner)popUpView.findViewById(R.id.spinnerlabs);
+        txtrating = (TextView)popUpView.findViewById(R.id.txtrating);
+        ratingBar = (RatingBar)popUpView.findViewById(R.id.ratingBar);
+        txtnumstar = (TextView)popUpView.findViewById(R.id.txtnumstar);
+        final String selectlab = spinnerlabs.getSelectedItem().toString();
 
-        btnlike.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnlike.setBackgroundResource(R.drawable.edt_selected);
-                btnlike.setHintTextColor(Color.parseColor("#27A9A2"));
-                btndislike.setBackgroundResource(R.drawable.edt_signup_bg);
-                btndislike.setHintTextColor(Color.parseColor("#9A9A9A"));
 
-            }
-        });
 
-        btndislike.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnlike.setBackgroundResource(R.drawable.edt_signup_bg);
-                btnlike.setHintTextColor(Color.parseColor("#9A9A9A"));
-                btndislike.setBackgroundResource(R.drawable.edt_selected);
-                btndislike.setHintTextColor(Color.parseColor("#27A9A2"));
+       btnlike.setOnTouchListener(new View.OnTouchListener() {
+           @Override
+           public boolean onTouch(View v, MotionEvent event) {
+               txtrating.setText("Like");
+               btnlike.setBackgroundResource(R.drawable.edt_selected);
+               btnlike.setHintTextColor(Color.parseColor("#27A9A2"));
+               btndislike.setBackgroundResource(R.drawable.edt_signup_bg);
+               btndislike.setHintTextColor(Color.parseColor("#9A9A9A"));
+               return false;
+           }
 
-            }
-        });
-        String rate = "";
-        if(btnlike.isSelected() == true){
-            rate = "Like";
+       });
 
-        }
-        else{
-            rate = "Dislike";
-        }
+       btndislike.setOnTouchListener(new View.OnTouchListener() {
+           @Override
+           public boolean onTouch(View v, MotionEvent event) {
+               txtrating.setText("Dislike");
+               btnlike.setBackgroundResource(R.drawable.edt_signup_bg);
+               btnlike.setHintTextColor(Color.parseColor("#9A9A9A"));
+               btndislike.setBackgroundResource(R.drawable.edt_selected);
+               btndislike.setHintTextColor(Color.parseColor("#27A9A2"));
+
+               return false;
+           }
+       });
+
+       ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+           @Override
+           public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+               String ratingStars = String.valueOf(ratingBar.getRating());
+               txtnumstar.setText(ratingStars);
+           }
+       });
+
+
+
+
+
         Calendar c = Calendar.getInstance();
         int day = c.get(Calendar.DAY_OF_MONTH);
 
@@ -140,7 +163,6 @@ public class LabResultActivity extends AppCompatActivity {
         final String time = mydate.format(currentLocalTIme);
 
 
-        final String finalRate = rate;
         alertDialogBuilder
                 .setCancelable(false)
                 .setPositiveButton("Post", new DialogInterface.OnClickListener() {
@@ -151,10 +173,13 @@ public class LabResultActivity extends AppCompatActivity {
                         reviews.setTxtBody(reviewcontent.getText().toString());
                         reviews.setTxtDay(date);
                         reviews.setTxtTime(time);
-                        reviews.setRating(finalRate);
+                        reviews.setRating(txtrating.getText().toString());
+                        reviews.setLab(selectlab);
+                        reviews.setStars(txtnumstar.getText().toString());
 
                        DatabaseReference newRef = reference.push();
                        newRef.setValue(reviews);
+
 
                     }
                 })
@@ -189,9 +214,11 @@ public class LabResultActivity extends AppCompatActivity {
 
                     resultsList.add(results);
                 }
+                Collections.reverse(resultsList);
 
                 adapter = new ResultsList(LabResultActivity.this, resultsList);
                 listViewResults.setAdapter(adapter);
+
 
                 listViewResults.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override

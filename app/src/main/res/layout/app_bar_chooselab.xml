@@ -23,12 +23,11 @@
 
 
                 <TextView
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_centerHorizontal="true"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="Laboratories"
-                    android:fontFamily="@font/monsterrat"
+                    android:text="Choose Medical Lab"
+                    android:fontFamily="@font/monsterratbold"
                     android:textColor="@color/white"
                     android:textSize="17sp"
                     />

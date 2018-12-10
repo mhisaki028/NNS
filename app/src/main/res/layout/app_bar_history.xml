@@ -8,7 +8,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbarlayout"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="wrap_content"
         android:theme="@style/ToolbarTheme"
         android:background="@drawable/background_toolbar_dashboard">
 
@@ -24,12 +24,11 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
+                   android:layout_centerHorizontal="true"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="History"
-                    android:fontFamily="@font/monsterrat"
+                    android:text="Booking History"
+                    android:fontFamily="@font/monsterratbold"
                     android:textColor="@color/white"
                     android:textSize="17sp"
                     />

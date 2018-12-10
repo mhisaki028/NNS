@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:background="@color/lightgray">
 
     <include
         android:id="@+id/app_bar_history"
@@ -14,16 +15,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_profile"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+        android:layout_below="@id/app_bar_history">
 
         <ImageView
             android:id="@+id/img1"
             android:layout_centerHorizontal="true"
             android:layout_width="140dp"
             android:layout_height="140dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/icon_medtech"
             android:background="@drawable/circlebackground"
             android:padding="25dp"/>
@@ -37,26 +36,17 @@
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
             android:textColor="@color/textcolor"
-            android:fontFamily="@font/monsterratmed"
+            android:fontFamily="@font/monsterrat"
             android:text="Your Booking History"
             android:layout_marginBottom="10dp"/>
 
-        <ImageView
-            android:layout_below="@id/txt1"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:src="@drawable/divider"
-            android:layout_marginBottom="10dp"
-            />
 
     </RelativeLayout>
 
 
     <RelativeLayout
         android:id="@+id/rel2"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@id/rel1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

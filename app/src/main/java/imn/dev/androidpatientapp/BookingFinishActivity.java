@@ -10,6 +10,8 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.text.DecimalFormat;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,6 +37,7 @@ public class BookingFinishActivity extends AppCompatActivity {
                 String labLoc = getIntent().getStringExtra("labLoc");
                 String serviceName = getIntent().getStringExtra("serviceName");
                 String servicePrice = getIntent().getStringExtra("servicePrice");
+                String serviceDesc = getIntent().getStringExtra("serviceDesc");
                 String bookDate = getIntent().getStringExtra("bookDate");
                 String bookTime = getIntent().getStringExtra("bookTime");
                 String patientName = getIntent().getStringExtra("patientName");
@@ -44,7 +47,7 @@ public class BookingFinishActivity extends AppCompatActivity {
                 Double servprice = Double.parseDouble(servicePrice);
                 Double total_fee;
                 total_fee = (100 + 50) + servprice;
-
+                final String sp = String.valueOf(decimalFormat.format(servprice));
                 final String total = String.valueOf(decimalFormat.format(total_fee));
 
 
@@ -58,6 +61,7 @@ public class BookingFinishActivity extends AppCompatActivity {
 
                 TextView service_name = (TextView)popUpView.findViewById(R.id.service_name);
                 TextView service_price = (TextView)popUpView.findViewById(R.id.service_price);
+                TextView service_desc = (TextView)popUpView.findViewById(R.id.service_desc);
                 TextView myaddress = (TextView)popUpView.findViewById(R.id.patient_address);
                 TextView lab_name = (TextView)popUpView.findViewById(R.id.lab_name);
                 TextView date = (TextView)popUpView.findViewById(R.id.bookDate);
@@ -66,12 +70,13 @@ public class BookingFinishActivity extends AppCompatActivity {
                 TextView totalfee = (TextView)popUpView.findViewById(R.id.totalfee);
 
                 service_name.setText(serviceName);
-                service_price.setText("P "+ servicePrice);
+                service_price.setText("P "+ sp);
+                service_desc.setText(serviceDesc);
                 myaddress.setText(address);
                 lab_name.setText(labName);
                 date.setText(bookDate);
                 time.setText(bookTime);
-                service_price2.setText("P "+ servicePrice);
+                service_price2.setText("P "+ sp);
                 totalfee.setText("P " + total);
 
                 alertDialogBuilder
@@ -79,8 +84,9 @@ public class BookingFinishActivity extends AppCompatActivity {
                         .setPositiveButton("Done", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                finish();
+
                                 startActivity(new Intent(BookingFinishActivity.this, BaseActivity.class));
+                                finish();
                             }
                         })
                         .setNegativeButton("Back", new DialogInterface.OnClickListener() {

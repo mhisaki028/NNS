@@ -86,6 +86,7 @@
             android:layout_marginRight="60dp"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
+            android:fontFamily="@font/monsterratbold"
             android:layout_height="41dp"
             android:background="@drawable/edt_signup_bg"/>
 
@@ -103,6 +104,7 @@
             android:layout_marginRight="60dp"
             android:layout_width="match_parent"
             android:layout_height="41dp"
+            android:fontFamily="@font/monsterratbold"
             android:background="@drawable/edt_signup_bg"/>
 
 
@@ -113,12 +115,12 @@
             android:layout_below="@id/edtPassword"
             android:layout_centerHorizontal="true"
             android:layout_marginRight="30dp"
-            android:textColor="@color/subtitle_textcolor"
+            android:textColor="@color/colorPrimary"
             android:text="Forgot Password ?"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:textAllCaps="false"
             android:fontFamily="@font/monsterratbold"
-            android:background="@color/transparent" />
+            android:background="@color/transparent"/>
 
         <Button
             android:id="@+id/btnSignIn"
@@ -140,15 +142,15 @@
 
         <EditText
             android:id="@+id/btnSignUp"
-            android:textSize="15sp"
-            android:text="Sign Up"
+            android:textSize="14sp"
+            android:text="Register for an account"
             android:gravity="center"
             android:textColor="@color/textcolor"
             android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="170dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
             android:layout_below="@id/btnSignIn"
             android:fontFamily="@font/monsterratbold"
@@ -158,16 +160,6 @@
 
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="190dp"
-            android:layout_marginLeft="110dp"
-            android:layout_below="@id/btnSignIn"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            android:text="Dont Have an Account? "/>
 
 
 

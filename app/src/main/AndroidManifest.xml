@@ -22,7 +22,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".SignInActivity">
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,6 +35,7 @@
         <activity android:name=".LabTestProfileActivity" />
         <activity android:name=".ChooseLaboratoryActivity" />
         <activity android:name=".ChooseLaboratory2Activity" />
+        <activity android:name=".ChooseLaboratory3Activity"/>
         <activity android:name=".LaboratoryProfileActivity" />
         <activity android:name=".LaboratoryInfoActivity" />
         <activity android:name=".ReviewsActivity" />
@@ -46,6 +47,10 @@
         <activity android:name=".BookingHistoryActivity" />
         <activity android:name=".UserSettingActivity" />
         <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".SignInActivity"/>
+        <activity android:name=".SignUpActivity"/>
+        <activity android:name=".LoadingScreenActivity" />
+        <activity android:name=".PackagesActivity" />
         <activity android:name=".LabResultActivity">
             <intent-filter>
                 <action android:name="imn.dev.androidpatientapp_TARGET_NOTIFICATION" />
@@ -53,12 +58,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoadingScreenActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".PackagesActivity" />
 
         <service
-            android:name=".MyFirebaseMessagingService">
+            android:name=".services.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>

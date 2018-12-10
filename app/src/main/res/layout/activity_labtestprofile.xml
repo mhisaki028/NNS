@@ -5,9 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootLayout"
-    tools:context=".ChooseLaboratoryActivity"
-    android:focusable="true"
-    android:focusableInTouchMode="true">
+    android:background="@color/lightgray">
 
     <include layout="@layout/app_bar_labtesthelp"
         android:id="@+id/app_bar_labtesthelp"/>
@@ -17,57 +15,27 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@drawable/list_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@id/app_bar_labtesthelp">
-
-        <ImageView
-            android:id="@+id/labtest_image"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:padding="10dp"
-            android:background="@drawable/circlebackground"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"/>
 
 
         <TextView
-            android:layout_toRightOf="@id/labtest_image"
             android:id="@+id/service_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/textcolor"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:text="LabTest Name"
             android:fontFamily="@font/monsterratbold"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"/>
 
-        <ImageView
-            android:id="@+id/pesosign"
-            android:tint="@color/subtitle_textcolor"
-            android:layout_width="19dp"
-            android:layout_height="24dp"
-            android:layout_toRightOf="@id/labtest_image"
-            android:layout_below="@id/service_name"
-            android:src="@drawable/icon_peso"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="7dp"
 
-            />
 
-        <TextView
-            android:layout_below="@id/service_name"
-            android:layout_toRightOf="@id/pesosign"
-            android:id="@+id/service_price"
-            android:layout_width="wrap_content"
-            android:text="Price"
-            android:textSize="17sp"
-            android:textColor="@color/subtitle_textcolor"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"/>
 
 
 
@@ -75,11 +43,13 @@
 
     <RelativeLayout
         android:id="@+id/rel2"
-        android:background="@color/white"
+        android:background="@drawable/list_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/rel1"
-        android:layout_marginTop="3dp">
+        android:layout_marginTop="20dp">
 
 
         <TextView

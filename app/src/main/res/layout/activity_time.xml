@@ -5,36 +5,16 @@
     <include layout="@layout/app_bar_booking"
         android:id="@+id/app_bar_booking"/>
 
+
     <RelativeLayout
-        android:id="@+id/time_layout"
         android:layout_below="@id/app_bar_booking"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white">
-
-        <TextView
-            android:id="@+id/txttop"
-            android:text="Choose Time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/app_bar_chooselab"
-            android:fontFamily="@font/monsterratbold"
-            android:textColor="@color/black"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="25dp"
-            android:textSize="27sp"/>
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:layout_below="@id/time_layout"
         android:id="@+id/reltop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/recbackground_colored"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="30dp">
 
         <TextView
             android:id="@+id/time"
@@ -91,8 +71,8 @@
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
             android:text="8:00 - 9:00"
-            android:textSize="17sp"
-            android:layout_marginLeft="15dp"
+            android:textSize="15sp"
+            android:layout_marginLeft="25dp"
             android:textColor="@color/lababout_textcolor"
             android:layout_marginTop="20dp"/>
 
@@ -105,7 +85,7 @@
             android:padding="10dp"
             android:text="9:00 - 10:00"
             android:textColor="@color/lababout_textcolor"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:layout_toRightOf="@id/eight"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"/>
@@ -118,7 +98,7 @@
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
             android:text="10:00 - 11:00"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:textColor="@color/lababout_textcolor"
             android:layout_toRightOf="@id/nine"
             android:layout_marginLeft="10dp"
@@ -133,9 +113,9 @@
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
             android:text="11:00 - 12:00"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:textColor="@color/lababout_textcolor"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="25dp"
             android:layout_marginTop="20dp"/>
 
         <TextView
@@ -146,7 +126,7 @@
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
             android:text="1:00 - 2:00"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:textColor="@color/lababout_textcolor"
             android:layout_toRightOf="@id/eleven"
             android:layout_marginLeft="10dp"
@@ -160,7 +140,7 @@
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
             android:text="2:00 - 3:00"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:layout_toRightOf="@id/one"
             android:textColor="@color/lababout_textcolor"
             android:layout_marginLeft="10dp"
@@ -175,7 +155,7 @@
             android:background="@drawable/edt_signup_bg"
             android:padding="10dp"
             android:text="3:00 - 4:00"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:textColor="@color/lababout_textcolor"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="20dp"/>
@@ -185,7 +165,6 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:background="@color/background_opacity"
         android:layout_below="@id/reltime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

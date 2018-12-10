@@ -9,23 +9,25 @@
 
     <RelativeLayout
         android:id="@+id/rel1"
-        android:background="@drawable/card_bg"
+        android:background="@drawable/list_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
 
         <ImageView
             android:id="@+id/imgresult"
-            android:layout_alignParentRight="true"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:background="@drawable/circlebackground_colored"
-            android:src="@drawable/icon_results"
-            android:tint="@color/white"
-            android:padding="10dp"
-            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/circlebackground_colored"
+            android:padding="10dp"
+            android:src="@drawable/icon_results"
+            android:tint="@color/white" />
 
 
         <TextView
@@ -35,7 +37,7 @@
             android:textColor="@color/textcolor"
             android:textSize="14sp"
             android:text="Title"
-            android:fontFamily="@font/monsterratmed"
+            android:fontFamily="@font/monsterrat"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"/>
 

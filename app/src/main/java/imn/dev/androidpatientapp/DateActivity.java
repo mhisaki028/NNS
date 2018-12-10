@@ -51,24 +51,25 @@ public class DateActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String phone = getIntent().getStringExtra("phone");
-
                 String labID = getIntent().getStringExtra("labID");
+                String labImage = getIntent().getStringExtra("labImage");
                 String labName = getIntent().getStringExtra("labName");
                 String labDesc = getIntent().getStringExtra("labDesc");
                 String labLoc = getIntent().getStringExtra("labLoc");
                 String serviceName = getIntent().getStringExtra("serviceName");
                 String servicePrice = getIntent().getStringExtra("servicePrice");
+                String serviceDesc = getIntent().getStringExtra("serviceDesc");
                 String bookDate = mydate.getText().toString();
 
                 Intent intent = new Intent(DateActivity.this, TimeActivity.class);
-                intent.putExtra("phone", phone);
                 intent.putExtra("labID", labID);
+                intent.putExtra("labImage", labImage);
                 intent.putExtra("labName", labName);
                 intent.putExtra("labDesc", labDesc);
                 intent.putExtra("labLoc", labLoc);
                 intent.putExtra("serviceName",serviceName);
                 intent.putExtra("servicePrice",servicePrice);
+                intent.putExtra("serviceDesc", serviceDesc);
                 intent.putExtra("bookDate", bookDate);
 
                 startActivity(intent);

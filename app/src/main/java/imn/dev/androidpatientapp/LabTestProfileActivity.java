@@ -12,7 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 
 public class LabTestProfileActivity extends AppCompatActivity {
 
-    TextView service_name, service_price, service_prep;
+    TextView service_name, service_prep;
 
 
     @Override
@@ -29,14 +29,13 @@ public class LabTestProfileActivity extends AppCompatActivity {
         }
 
         service_name = (TextView) findViewById(R.id.service_name);
-        service_price = (TextView) findViewById(R.id.service_price);
         service_prep = (TextView) findViewById(R.id.service_prep);
 
         String serviceName = getIntent().getStringExtra("serviceName");
-        String servicePrice = getIntent().getStringExtra("servicePrice");
+        String serviceDesc = getIntent().getStringExtra("serviceDesc");
 
         service_name.setText(serviceName);
-        service_price.setText(servicePrice);
+        service_prep.setText(serviceDesc);
 
 
 

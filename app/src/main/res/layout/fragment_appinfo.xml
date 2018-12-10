@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/rootLayout"
-    tools:context=".SignInActivity">
+    android:background="@color/lightgray">
 
     <include layout="@layout/app_bar_appinfos"
         android:id="@+id/app_bar_appinfos"/>
@@ -24,8 +24,8 @@
             android:id="@+id/logo"
             android:layout_marginTop="20dp"
              android:src="@mipmap/mdlablogo"
-            android:layout_width="130dp"
-            android:layout_height="130dp" />
+            android:layout_width="110dp"
+            android:layout_height="110dp" />
 
         <TextView
             android:layout_below="@id/logo"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="About Us"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:fontFamily="@font/monsterratbold"
             android:textColor="@color/black"/>
 
@@ -43,11 +43,13 @@
 
     <RelativeLayout
         android:id="@+id/rel1"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/logolayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@drawable/list_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -72,7 +74,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="25dp"
             android:text="See more"
-            android:background="@drawable/edt_signup_bg"
+            android:background="@color/transparent"
             android:padding="15dp"
             android:textSize="14sp"
             android:focusable="false"
@@ -85,12 +87,14 @@
         android:layout_below="@id/rel1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="3dp">
+        android:layout_marginTop="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white">
+            android:background="@drawable/list_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
                 <TextView
                     android:id="@+id/txtdev"
@@ -116,7 +120,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="25dp"
                 android:text="Credits"
-                android:background="@drawable/edt_signup_bg"
+                android:background="@color/transparent"
                 android:padding="15dp"
                 android:textSize="14sp"
                 android:focusable="false"
@@ -126,102 +130,108 @@
              <ImageView
                 android:layout_below="@id/txtdev"
                 android:id="@+id/pic1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 app:srcCompat="@drawable/pic1"
                  android:layout_marginLeft="25dp"/>
 
              <TextView
                  android:id="@+id/txtname"
-                 android:layout_width="wrap_content"
+                 android:layout_width="match_parent"
+                 android:layout_marginRight="20dp"
                  android:layout_height="wrap_content"
                  android:layout_toRightOf="@id/pic1"
                  android:layout_below="@id/txtdev"
-                 android:layout_marginTop="20dp"
+                 android:layout_marginTop="10dp"
                  android:layout_marginLeft="30dp"
                  android:text="Nirson Nino S. Samson"
-                 android:textSize="17sp"
+                 android:textSize="15sp"
                  android:fontFamily="@font/monsterratbold"
                  android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/txtyear"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/pic1"
                 android:layout_below="@id/txtname"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="30dp"
                 android:text="4th Year/ BSIT-SM"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_below="@id/txtyear"
                 android:id="@+id/pic2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 app:srcCompat="@drawable/pic2"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="50dp"/>
 
             <TextView
                 android:id="@+id/txtname1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/pic2"
                 android:layout_below="@id/txtyear"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginLeft="30dp"
                 android:text="Maria Victoria C. Depusoy"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:fontFamily="@font/monsterratbold"
                 android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/txtyear1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/pic2"
                 android:layout_below="@id/txtyear"
-                android:layout_marginTop="95dp"
+                android:layout_marginTop="85dp"
                 android:layout_marginLeft="30dp"
                 android:text="4th Year/ BSIT-SM"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_below="@id/txtyear1"
                 android:id="@+id/pic3"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 app:srcCompat="@drawable/pic3"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="50dp"/>
 
             <TextView
                 android:id="@+id/txtname2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/pic3"
                 android:layout_below="@id/txtyear1"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginLeft="30dp"
                 android:text="Ivy Coleen T. Lacerna"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:fontFamily="@font/monsterratbold"
                 android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/txtyear2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/pic2"
                 android:layout_below="@id/txtyear1"
-                android:layout_marginTop="95dp"
+                android:layout_marginTop="85dp"
                 android:layout_marginLeft="30dp"
                 android:text="4th Year/ BSIT-SM"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textColor="@color/black"
                 android:layout_marginBottom="20dp"/>
 

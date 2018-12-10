@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_below="@id/app_bar_packages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_package">
+
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Php 2,150"
+            android:textColor="@color/white"
+            android:fontFamily="@font/monsterratbold"
+            android:textSize="36sp"/>
+
+        <TextView
+            android:id="@+id/txtpackage"
+            android:layout_below="@id/price"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diabetes Awareness Package"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/txtpackage"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:src="@drawable/divider"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/fbs"
+            android:layout_below="@id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Magic 8"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/bun"
+            android:layout_below="@id/fbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="HbA1c"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/creat"
+            android:layout_below="@id/bun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="SGPT"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/uric"
+            android:layout_below="@id/creat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Urinalysis"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/sod"
+            android:layout_below="@id/uric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Sodium"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/pot"
+            android:layout_below="@id/sod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Potassium"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+
+        <Button
+            android:id="@+id/btnavail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/pot"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edt_signin_bg"
+            android:text="Avail Now"
+            android:textColor="@color/white"
+            android:fontFamily="@font/monsterratbold"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="170dp"/>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

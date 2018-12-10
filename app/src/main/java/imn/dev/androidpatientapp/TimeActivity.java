@@ -51,7 +51,7 @@ public class TimeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 time.setText("8:00 - 9:00");
                 meridian.setText("AM");
-                eight.setBackgroundResource(R.drawable.card_bg);
+                eight.setBackgroundResource(R.drawable.select_time_bg);
                 eight.setTextColor(Color.parseColor("#5FE5BC"));
 
                 nine.setBackgroundResource(R.drawable.edt_signup_bg);
@@ -82,7 +82,7 @@ public class TimeActivity extends AppCompatActivity {
                 eight.setBackgroundResource(R.drawable.edt_signup_bg);
                 eight.setTextColor(Color.parseColor("#3D3D3D"));
 
-                nine.setBackgroundResource(R.drawable.card_bg);
+                nine.setBackgroundResource(R.drawable.select_time_bg);
                 nine.setTextColor(Color.parseColor("#5FE5BC"));
 
                 ten.setBackgroundResource(R.drawable.edt_signup_bg);
@@ -113,7 +113,7 @@ public class TimeActivity extends AppCompatActivity {
                 nine.setBackgroundResource(R.drawable.edt_signup_bg);
                 nine.setTextColor(Color.parseColor("#3D3D3D"));
 
-                ten.setBackgroundResource(R.drawable.card_bg);
+                ten.setBackgroundResource(R.drawable.select_time_bg);
                 ten.setTextColor(Color.parseColor("#5FE5BC"));
 
                 eleven.setBackgroundResource(R.drawable.edt_signup_bg);
@@ -144,7 +144,7 @@ public class TimeActivity extends AppCompatActivity {
                 ten.setBackgroundResource(R.drawable.edt_signup_bg);
                 ten.setTextColor(Color.parseColor("#3D3D3D"));
 
-                eleven.setBackgroundResource(R.drawable.card_bg);
+                eleven.setBackgroundResource(R.drawable.select_time_bg);
                 eleven.setTextColor(Color.parseColor("#5FE5BC"));
 
                 one.setBackgroundResource(R.drawable.edt_signup_bg);
@@ -175,7 +175,7 @@ public class TimeActivity extends AppCompatActivity {
                 eleven.setBackgroundResource(R.drawable.edt_signup_bg);
                 eleven.setTextColor(Color.parseColor("#3D3D3D"));
 
-                one.setBackgroundResource(R.drawable.card_bg);
+                one.setBackgroundResource(R.drawable.select_time_bg);
                 one.setTextColor(Color.parseColor("#5FE5BC"));
 
                 two.setBackgroundResource(R.drawable.edt_signup_bg);
@@ -206,7 +206,7 @@ public class TimeActivity extends AppCompatActivity {
                 one.setBackgroundResource(R.drawable.edt_signup_bg);
                 one.setTextColor(Color.parseColor("#3D3D3D"));
 
-                two.setBackgroundResource(R.drawable.card_bg);
+                two.setBackgroundResource(R.drawable.select_time_bg);
                 two.setTextColor(Color.parseColor("#5FE5BC"));
 
                 three.setBackgroundResource(R.drawable.edt_signup_bg);
@@ -237,7 +237,7 @@ public class TimeActivity extends AppCompatActivity {
                 two.setBackgroundResource(R.drawable.edt_signup_bg);
                 two.setTextColor(Color.parseColor("#3D3D3D"));
 
-                three.setBackgroundResource(R.drawable.card_bg);
+                three.setBackgroundResource(R.drawable.select_time_bg);
                 three.setTextColor(Color.parseColor("#5FE5BC"));
             }
         });
@@ -246,14 +246,16 @@ public class TimeActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String phone = getIntent().getStringExtra("phone");
+
                 String labID = getIntent().getStringExtra("labID");
+                String labImage = getIntent().getStringExtra("labImage");
                 String labName = getIntent().getStringExtra("labName");
                 String labDesc = getIntent().getStringExtra("labDesc");
                 String labLoc = getIntent().getStringExtra("labLoc");
                 String labService = getIntent().getStringExtra("labService");
                 String serviceName = getIntent().getStringExtra("serviceName");
                 String servicePrice = getIntent().getStringExtra("servicePrice");
+                String serviceDesc = getIntent().getStringExtra("serviceDesc");
                 String bookDate = getIntent().getStringExtra("bookDate");
                 String mytime = time.getText().toString();
                 String mer = meridian.getText().toString();
@@ -261,14 +263,15 @@ public class TimeActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(TimeActivity.this, PatientDetailsActivity.class);
 
-                intent.putExtra("phone", phone);
                 intent.putExtra("labID", labID);
+                intent.putExtra("labImage", labImage);
                 intent.putExtra("labName", labName);
                 intent.putExtra("labDesc", labDesc);
                 intent.putExtra("labLoc", labLoc);
                 intent.putExtra("labService", labService);
                 intent.putExtra("serviceName", serviceName);
                 intent.putExtra("servicePrice", servicePrice);
+                intent.putExtra("serviceDesc", serviceDesc);
                 intent.putExtra("bookDate", bookDate);
                 intent.putExtra("bookTime", bookTime);
 

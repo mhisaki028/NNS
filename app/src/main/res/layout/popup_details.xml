@@ -61,12 +61,26 @@
         android:textColor="@color/black"
         android:text="Price" />
 
+    <TextView
+        android:id="@+id/service_desc"
+        android:layout_below="@id/service_price"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/imgtest"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="Desc" />
+
     <ImageView
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:src="@drawable/divider"
-        android:layout_below="@id/service_price"
+        android:layout_below="@id/service_desc"
         android:layout_marginTop="10dp"/>
 
     <TextView
